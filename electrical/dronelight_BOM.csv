@@ -1,54 +1,83 @@
-Reference,Column1, Value, Footprint, Datasheet, Supplier 1, Supplier 1 Part Number, Manufacturer, Manufacturer Part Number, DNP
-R1 R12 R13 R14 R15,5,1k,,,Digikey,P1.00KHCT-ND,Panasonic, ERJ-3EKF1001V,
-J3,1,USB_OTG,,,Digikey,609-4618-1-ND,Amphenol,10118194-0001LF,
-U2,1,ATSAMD21G,,,Digikey,ATSAMD21G16B-AFTCT-ND,Atmel,ATSAMD21G16B-AFT,
-D1 D2 D4,3,B550C,,,Digikey,B550C-FDICT-ND,Diodes Inc,B550C-13-F,
-C5 C6 C9 C10 C13,5,0.1uF,,,Digikey,311-1088-1-ND,Yageo,CC0603KRX7R7BB104,
-C4 C14,2,1uF,,,Digikey,1276-1182-1-ND,Samsung,CL10A105KP8NNNC,
-C1 C11,2,0.01uF,,,Digikey,1276-1921-1-ND,Samsung,CL10B103KB8NCNC,
-C15,,4.7uF,,,Digikey,1276-1065-1-ND,Samsung,CL21A475KOFNNNE,
-C2 C3 C8 C16,4,22uF,,,Digikey,1276-3391-1-ND,Samsung,CL32B226KAJNFNE,
-D3,1,RGB_LED_Cree_PLCC4,,,Mouser,941-CLMVBFKACFHEHLCB,Cree,CLMVB-FKA-CFHEHLCBB7A363,
-R16,1,0.005R,,,Digikey,CRF0805-FX-R005ELFCT-ND,Bourns,CRF0805-FX-R005ELF,
-Q1 Q2,2,DMT6016,,,Digikey,DMT6016LPS-13DICT-ND,Diodes Inc,DMT6016LPS-13,
-L1,,22uH,,,Digikey,513-1044-1-ND,Eaton,DR127-220-R,
-FB1,,22uH,,,Digikey,1276-6330-1-ND,Samsung,CIM21J202NE,
-R17,,33mR,,,Digikey,P17467CT-ND,Panasonic,ERJ-3BWFR033V,
-R10,,10k,,,Digikey,P10.0KHCT-ND,Panasonic,ERJ-3EKF1002V,
-R11,,10k,,,Digikey,P10.0KHCT-ND,Panasonic,ERJ-3EKF1002V,
-R5,,10k,,,Digikey,P10.0KHCT-ND,Panasonic,ERJ-3EKF1002V,
-R18,,1M,,,Digikey,P1.00MHCT-ND,Panasonic,ERJ-3EKF1004V,
-R3,,1M,,,Digikey,P1.00MHCT-ND,Panasonic,ERJ-3EKF1004V,
-R7,,1M,,,Digikey,P1.00MHCT-ND,Panasonic,ERJ-3EKF1004V,
-R2,,150k,,,Digikey,P150KHCT-ND,Panasonic,ERJ-3EKF1503V,
-R6,,150k,,,Digikey,P150KHCT-ND,Panasonic,ERJ-3EKF1503V,
-R8,,19.6k,,,Digikey,P19.6KHCT-ND,Panasonic,ERJ-3EKF1962V,
-R19,,28.7k,,,Digikey,P28.7KHCT-ND,Panasonic,ERJ-3EKF2872V,
-R9,,28.7k,,,Digikey,P28.7KHCT-ND,Panasonic,ERJ-3EKF2872V,
-SW1,,RESET,,,Digikey,450-1129-ND,TE,FSM4JSMA,
-SW2,,RESET,,,Digikey,450-1129-ND,TE,FSM4JSMA,
-SW3,,RESET,,,Digikey,450-1129-ND,TE,FSM4JSMA,
-SW4,,RESET,,,Digikey,450-1129-ND,TE,FSM4JSMA,
-C12,,10uF,,,Digikey,490-10516-1-ND ,Murata,GRM21BR71A106KA73L,
-C7,,10uF,,,Digikey,490-10516-1-ND ,Murata,GRM21BR71A106KA73L,
-U1,,LT3755-2-MSE,,,Digikey,LT3755EMSE#PBF-ND,Linear,LT3755EMSE#PBF,
-RT1,,100k,,,Digikey,490-2430-1-ND,Murata,NCP18WF104J03RB,
-U3,,NCP5501,,,Digikey,NCP5501DT33RKGOSCT-ND,ON Semi,NCP5501DT33RKG,
-J7,,SAFETY,,,Digikey,S1011EC-02-ND,Sullins,PRPC002SAAN-RC,
-J1,,SERVO,,,Digikey,S1011EC-03-ND,Sullins,PRPC003SAAN-RC,
-J2,,SERVO,,,Digikey,S1011EC-03-ND,Sullins,PRPC003SAAN-RC,
-J4,,JTAG,,,Digikey,S9172-ND,Sullins,SBH11-PBPC-D10-ST-BK,
-D10,,LED,,,Arrow,XMLAWT0000000000T5051**M ,Cree,XMLAWT-00-0000-0000T5051,
-D11,,LED,,,Arrow,XMLAWT0000000000T5051**M ,Cree,XMLAWT-00-0000-0000T5051,
-D12,,LED,,,Arrow,XMLAWT0000000000T5051**M ,Cree,XMLAWT-00-0000-0000T5051,
-D13,,LED,,,Arrow,XMLAWT0000000000T5051**M ,Cree,XMLAWT-00-0000-0000T5051,
-D14,,LED,,,Arrow,XMLAWT0000000000T5051**M ,Cree,XMLAWT-00-0000-0000T5051,
-D5,,LED,,,Arrow,XMLAWT0000000000T5051**M ,Cree,XMLAWT-00-0000-0000T5051,
-D6,,LED,,,Arrow,XMLAWT0000000000T5051**M ,Cree,XMLAWT-00-0000-0000T5051,
-D7,,LED,,,Arrow,XMLAWT0000000000T5051**M ,Cree,XMLAWT-00-0000-0000T5051,
-D8,,LED,,,Arrow,XMLAWT0000000000T5051**M ,Cree,XMLAWT-00-0000-0000T5051,
-D9,,LED,,,Arrow,XMLAWT0000000000T5051**M ,Cree,XMLAWT-00-0000-0000T5051,
-J5,,XT60,,,Sparkfun,PRT-10474,,,
-J6,,JST RCY,,,,,,,DNP
-J8,,CONN_01X08,,,,,,,DNP
-R4,,DNP,,,,,,,DNP
+Reference, Value, Footprint, Datasheet, Manufacturer, Manufacturer Part Number, Supplier 1, Supplier 1 Part Number, Voltage, DisplayFootprint, TempCo, DNP
+"D1","FSV8100V","Reclaimer_Labs:TO-277_3L_Diode","","Fairchild-ON","FSV8100V","Digikey","FSV8100VCT-ND","","","",""
+"L1","22uH","Reclaimer_Labs:Inductor_DR127","","Eaton","DR127-220-R","Digikey","513-1044-1-ND","","","",""
+"U1","LT3755-2-MSE","Housings_SSOP:MSOP-16-1EP_3x4mm_Pitch0.5mm","","Linear","LT3755EMSE-2#PBF","Digikey","LT3755EMSE-2#PBF-ND","","","",""
+"Q1","DMT6016","Reclaimer_Labs:POWERDI5060-8","","Diodes Inc","DMT6016LPS-13","","","","","",""
+"R8","0.0005R","Reclaimer_Labs:CST0612","","Bourns","CST0612-FC-R0005-E","","","","","",""
+"C7","4.7uF","Capacitors_SMD:C_0805","","Samsung","CL21A475KOFNNNE","","","","","",""
+"C8","1000pF","Capacitors_SMD:C_0603","","MacroFab","MF-CAP-0603-1nF","","","","","",""
+"R9","28.7k","Resistors_SMD:R_0603","","Panasonic","ERJ-3EKF2872V","Digikey","P28.7KHCT-ND","","","",""
+"C6","0.01uF","Capacitors_SMD:C_0603","","MacroFab","MF-CAP-0603-0.01uF","","","","","",""
+"R7","100k","Resistors_SMD:R_0603","","MacroFab","MF-RES-0603-100K","","","","","",""
+"RT1","100k","Resistors_SMD:R_0603","","Murata","NCP18WF104J03RB","Digikey","490-2430-1-ND","","","",""
+"R3","18k","Resistors_SMD:R_0603","","MacroFab","MF-RES-0603-18K","","","","","",""
+"R6","100k","Resistors_SMD:R_0603","","MacroFab","MF-RES-0603-100K","","","","","",""
+"R1","680k","Resistors_SMD:R_0603","","MacroFab","MF-RES-0603-680K","","","","","",""
+"C3","10uF","Capacitors_SMD:C_1206","","Samsung","CL31A106MBHNNNE","","","50V","1206","X5R",""
+"R10","10k","Resistors_SMD:R_0603","","MacroFab","MF-RES-0603-10K","","","","","",""
+"R2","825k","Resistors_SMD:R_0603","","MacroFab","MF-RES-0603-825K","","","","","",""
+"R4","39mR","Resistors_SMD:R_0603","","Panasonic","ERJ-3BWFR039V","","","","","",""
+"R5","15k","Resistors_SMD:R_0603","","MacroFab","MF-RES-0603-15K","","","","","",""
+"J2","SAFETY","Socket_Strips:Socket_Strip_Straight_1x02_Pitch2.54mm","","MacroFab","MF-CON-2.54mm-01x02","","","","","",""
+"J1","CONN_01X04","Reclaimer_Labs:Header_04x01_2.5mm_RA","","JST","S4B-EH(LF)(SN)","","","","","",""
+"C2","10uF","Capacitors_SMD:C_1206","","Samsung","CL31A106MBHNNNE","","","50V","1206","X5R",""
+"C1","10uF","Capacitors_SMD:C_1206","","Samsung","CL31A106MBHNNNE","","","50V","1206","X5R",""
+"C4","4.7uF","Capacitors_SMD:C_1206","","Taiyo Yuden","HMK325BJ475KM-PE","","","100V","1210","X5R",""
+"C5","4.7uF","Capacitors_SMD:C_1206","","Taiyo Yuden","HMK325BJ475KM-PE","","","100V","1210","X5R",""
+"Q2","DMT6016","Reclaimer_Labs:POWERDI5060-8","","Diodes Inc","DMT6016LPS-13","","","","","",""
+"C29","4.7uF","Capacitors_SMD:C_0805","","Samsung","CL21A475KOFNNNE","","","","","",""
+"U2","nrf52840","Reclaimer_Labs:AQFN73","","Nordic","NRF52840-QIAA-T","","","","","",""
+"J3","ARM_Debug","Reclaimer_Labs:HEADER_SMT_02x05_1.27MM_POL","","CNC Tech","3220-10-0300-00","","","","","",""
+"R11","100k","Resistors_SMD:R_0603","","MacroFab","MF-RES-0603-100K","","","","","",""
+"Y1","32MHz","Reclaimer_Labs:Crystal_SMD_2016-4pin_2.0x1.6mm","","Murata","XRCGB32M000F2P00R0","","","","","",""
+"C12","8.2pF","Capacitors_SMD:C_0402","","MacroFab","MF-CAP-0402-8.2pF","","","","","",""
+"C13","8.2pF","Capacitors_SMD:C_0402","","MacroFab","MF-CAP-0402-8.2pF","","","","","",""
+"C10","0.8pF","Capacitors_SMD:C_0402","","Murata","GRM1555C2AR80BA01D","","","","","",""
+"L2","3.3nH","Capacitors_SMD:C_0402","","TDK","MLG1005S3N3BT000","","","","","",""
+"C11","0.5pF","Capacitors_SMD:C_0402","","Murata","GRM1555C1HR50BA01D","","","","","",""
+"D2","1N4148","Diodes_SMD:D_SOD-123","","MacroFab","MF-DIO-SOD123-1N4148","","","","","",""
+"C15","1uF","Capacitors_SMD:C_0603","","MacroFab","MF-CAP-0603-1uF","","","25V","0603","X7R",""
+"U3","AP2204","Reclaimer_Labs:SOT89-3","","Diodes Inc","AP2204R-3.3TRG1","","","","","",""
+"C16","0.1uF","Capacitors_SMD:C_0402","","MacroFab","MF-CAP-0402-0.1uF","","","","0402","",""
+"C20","1uF","Capacitors_SMD:C_0603","","MacroFab","MF-CAP-0603-1uF","","","","0603","",""
+"C17","0.1uF","Capacitors_SMD:C_0402","","MacroFab","MF-CAP-0402-0.1uF","","","","0402","",""
+"C18","0.1uF","Capacitors_SMD:C_0402","","MacroFab","MF-CAP-0402-0.1uF","","","","0402","",""
+"C19","0.1uF","Capacitors_SMD:C_0402","","MacroFab","MF-CAP-0402-0.1uF","","","","0402","",""
+"C23","0.1uF","Capacitors_SMD:C_0402","","MacroFab","MF-CAP-0402-0.1uF","","","","0402","",""
+"C26","100pF","Capacitors_SMD:C_0402","","Murata","GRM1555C1H101JA01D","","","","0402","",""
+"C27","1uF","Capacitors_SMD:C_0603","","MacroFab","MF-CAP-0603-1uF","","","","0603","",""
+"C24","DNP","Capacitors_SMD:C_0402","","MacroFab","MF-CAP-0402-0.1uF","","","","0402","","DNP"
+"C25","DNP","Capacitors_SMD:C_0402","","MacroFab","MF-CAP-0402-0.1uF","","","","0402","","DNP"
+"A1","Antenna","Reclaimer_Labs:2450AT18B100E","","Johanson","2450AT18B100E","","","","","",""
+"L3","3.3nH","Capacitors_SMD:C_0402","","TDK","MLG1005S3N3BT000","","","","","",""
+"C9","1.2pF","Capacitors_SMD:C_0402","","Johanson","500R07S1R2BV4T","","","","","",""
+"L4","2.7nH","Capacitors_SMD:C_0402","","Johanson","L-07C2N7SV6T","","","","","",""
+"J6","CONN_01X06","Socket_Strips:Socket_Strip_Straight_1x06_Pitch2.54mm","","MacroFab","MF-CON-2.54mm-01x06","","","","","",""
+"C21","4.7uF","Capacitors_SMD:C_0805","","Samsung","CL21A475KOFNNNE","","","","0805","",""
+"C14","4.7uF","Capacitors_SMD:C_0805","","Samsung","CL21A475KOFNNNE","","","","0805","",""
+"C22","4.7uF","Capacitors_SMD:C_0805","","Samsung","CL21A475KOFNNNE","","","","0805","",""
+"RT2","100k","Resistors_SMD:R_0603","","Murata","NCP18WF104J03RB","Digikey","490-2430-1-ND","","","",""
+"R15","18k","Resistors_SMD:R_0603","","MacroFab","MF-RES-0603-18K","","","","","",""
+"R16","750k","Resistors_SMD:R_0603","","MacroFab","MF-RES-0603-750K","","","","","",""
+"R17","100k","Resistors_SMD:R_0603","","MacroFab","MF-RES-0603-100K","","","","","",""
+"J7","CONN_02X06","Socket_Strips:Socket_Strip_Straight_2x06_Pitch2.54mm",""
+"C28","DNP","Capacitors_SMD:C_0603","","MacroFab","MF-CAP-0603-1uF","","","","0603","","DNP"
+"J4","XT30","Reclaimer_Labs:XT30",""
+"J5","USB_OTG","Reclaimer_Labs:USB_Micro-B_10118194-0001LF","","MacroFab","MF-CON-MICROUSB-RIGHT","","","","","",""
+"X1","MTHOLE","Reclaimer_Labs:MountingHole_3.5mm_Pad_Via",""
+"R12","1k","Resistors_SMD:R_0603","","MacroFab","MF-RES-0603-1K","","","","","",""
+"D3","RGB LED 3228 SMD PLCC-4","Reclaimer_Labs:PLCC4","","MacroFab","MF-LED-3228-RGB","","","","","",""
+"R13","1k","Resistors_SMD:R_0603","","MacroFab","MF-RES-0603-1K","","","","","",""
+"R14","1k","Resistors_SMD:R_0603","","MacroFab","MF-RES-0603-1K","","","","","",""
+"X2","MTHOLE","Reclaimer_Labs:MountingHole_3.5mm_Pad_Via",""
+"X3","MTHOLE","Reclaimer_Labs:MountingHole_3.5mm_Pad_Via",""
+"X4","MTHOLE","Reclaimer_Labs:MountingHole_3.5mm_Pad_Via",""
+"X5","HEATSINK","Reclaimer_Labs:573100D00010G","","Aavid Thermalloy","573100D00010G","","","","","",""
+"X6","HEATSINK","Reclaimer_Labs:573100D00010G","","Aavid Thermalloy","573100D00010G","","","","","",""
+"X7","HEATSINK","Reclaimer_Labs:573100D00010G","","Aavid Thermalloy","573100D00010G","","","","","",""
+"Q3","Photo_Trans","Reclaimer_Labs:Photo_Trans_ALS-PT19-315C","","Everlight","ALS-PT19-315C/L177/TR8","","","","","",""
+"R18","10k","Resistors_SMD:R_0603","","MacroFab","MF-RES-0603-10K","","","","","",""
+"U5","LPS22HB","Reclaimer_Labs:LGA10R50P2X3_200X200X80","","ST","LPS22HBTR","","","","","",""
+"C30","0.1uF","Capacitors_SMD:C_0402","","MacroFab","MF-CAP-0402-0.1uF","","","","0402","",""
+"U4","SPK0415HM4H-B","Reclaimer_Labs:SPK0415HM4H-8","","Knowles","SPK0415HM4H-B-7","","","","","",""
+"C31","0.1uF","Capacitors_SMD:C_0402","","MacroFab","MF-CAP-0402-0.1uF","","","","0402","",""

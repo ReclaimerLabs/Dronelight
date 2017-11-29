@@ -1,0 +1,785 @@
+EESchema Schematic File Version 2
+LIBS:dronelight-rescue
+LIBS:Jason_Custom_Home
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:dronelight-cache
+EELAYER 25 0
+EELAYER END
+$Descr USLetter 11000 8500
+encoding utf-8
+Sheet 2 5
+Title "Dronelight"
+Date "2017-05-29"
+Rev "2"
+Comp "Reclaimer Labs LLC"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text Label 5850 4300 0    50   ~ 0
+INTVCC
+$Comp
+L +BATT #PWR01
+U 1 1 5903CFFD
+P 1850 2600
+F 0 "#PWR01" H 1850 2450 50  0001 C CNN
+F 1 "+BATT" H 1850 2740 50  0000 C CNN
+F 2 "" H 1850 2600 50  0000 C CNN
+F 3 "" H 1850 2600 50  0000 C CNN
+	1    1850 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L D_Schottky D1
+U 1 1 5903D007
+P 7100 2700
+F 0 "D1" H 7100 2800 50  0000 C CNN
+F 1 "FSV8100V" H 7100 2600 50  0000 C CNN
+F 2 "Reclaimer_Labs:TO-277_3L_Diode" H 7100 2700 50  0001 C CNN
+F 3 "" H 7100 2700 50  0000 C CNN
+F 4 "Fairchild-ON" H 7100 2700 60  0001 C CNN "Manufacturer"
+F 5 "FSV8100V" H 7100 2700 60  0001 C CNN "Manufacturer Part Number"
+F 6 "Digikey" H 7100 2700 60  0001 C CNN "Supplier 1"
+F 7 "FSV8100VCT-ND" H 7100 2700 60  0001 C CNN "Supplier 1 Part Number"
+	1    7100 2700
+	-1   0    0    1   
+$EndComp
+$Comp
+L INDUCTOR L1
+U 1 1 5903D012
+P 6200 2700
+F 0 "L1" V 6150 2700 50  0000 C CNN
+F 1 "22uH" V 6300 2700 50  0000 C CNN
+F 2 "Reclaimer_Labs:Inductor_DR127" H 6200 2700 50  0001 C CNN
+F 3 "" H 6200 2700 50  0000 C CNN
+F 4 "Eaton" V 6200 2700 60  0001 C CNN "Manufacturer"
+F 5 "DR127-220-R" V 6200 2700 60  0001 C CNN "Manufacturer Part Number"
+F 6 "Digikey" V 6200 2700 60  0001 C CNN "Supplier 1"
+F 7 "513-1044-1-ND" V 6200 2700 60  0001 C CNN "Supplier 1 Part Number"
+	1    6200 2700
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LT3755-2-MSE U1
+U 1 1 5903D01D
+P 5650 3450
+F 0 "U1" H 5850 2850 60  0000 L CNN
+F 1 "LT3755-2-MSE" H 5800 2750 60  0000 L CNN
+F 2 "Housings_SSOP:MSOP-16-1EP_3x4mm_Pitch0.5mm" H 5650 3450 60  0001 C CNN
+F 3 "" H 5650 3450 60  0000 C CNN
+F 4 "Linear" H 5650 3450 60  0001 C CNN "Manufacturer"
+F 5 "LT3755EMSE-2#PBF" H 5650 3450 60  0001 C CNN "Manufacturer Part Number"
+F 6 "Digikey" H 5650 3450 60  0001 C CNN "Supplier 1"
+F 7 "LT3755EMSE-2#PBF-ND" H 5650 3450 60  0001 C CNN "Supplier 1 Part Number"
+	1    5650 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Q_NMOS_SGD Q1
+U 1 1 5903D028
+P 6700 3550
+F 0 "Q1" H 7000 3600 50  0000 R CNN
+F 1 "DMT6016" H 7250 3500 50  0000 R CNN
+F 2 "Reclaimer_Labs:POWERDI5060-8" H 6900 3650 50  0001 C CNN
+F 3 "" H 6700 3550 50  0000 C CNN
+F 4 "Diodes Inc" H 6700 3550 60  0001 C CNN "Manufacturer"
+F 5 "DMT6016LPS-13" H 6700 3550 60  0001 C CNN "Manufacturer Part Number"
+	1    6700 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R8
+U 1 1 5903D033
+P 6800 4000
+F 0 "R8" V 6880 4000 50  0000 C CNN
+F 1 "0.0005R" V 6700 4000 50  0000 C CNN
+F 2 "Reclaimer_Labs:CST0612" V 6730 4000 50  0001 C CNN
+F 3 "" H 6800 4000 50  0000 C CNN
+F 4 "Bourns" V 6800 4000 60  0001 C CNN "Manufacturer"
+F 5 "CST0612-FC-R0005-E" V 6800 4000 60  0001 C CNN "Manufacturer Part Number"
+	1    6800 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR02
+U 1 1 5903D03A
+P 6800 4150
+F 0 "#PWR02" H 6800 3900 50  0001 C CNN
+F 1 "GND" H 6800 4000 50  0000 C CNN
+F 2 "" H 6800 4150 50  0000 C CNN
+F 3 "" H 6800 4150 50  0000 C CNN
+	1    6800 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR03
+U 1 1 5903D040
+P 7700 5100
+F 0 "#PWR03" H 7700 4850 50  0001 C CNN
+F 1 "GND" H 7700 4950 50  0000 C CNN
+F 2 "" H 7700 5100 50  0000 C CNN
+F 3 "" H 7700 5100 50  0000 C CNN
+	1    7700 5100
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR04
+U 1 1 5903D046
+P 8450 3400
+F 0 "#PWR04" H 8450 3150 50  0001 C CNN
+F 1 "GND" H 8450 3250 50  0000 C CNN
+F 2 "" H 8450 3400 50  0000 C CNN
+F 3 "" H 8450 3400 50  0000 C CNN
+	1    8450 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR05
+U 1 1 5903D04C
+P 9550 3150
+F 0 "#PWR05" H 9550 2900 50  0001 C CNN
+F 1 "GND" H 9550 3000 50  0000 C CNN
+F 2 "" H 9550 3150 50  0000 C CNN
+F 3 "" H 9550 3150 50  0000 C CNN
+	1    9550 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C7
+U 1 1 5903D056
+P 5750 4450
+F 0 "C7" H 5775 4550 50  0000 L CNN
+F 1 "4.7uF" H 5775 4350 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 5788 4300 50  0001 C CNN
+F 3 "" H 5750 4450 50  0000 C CNN
+F 4 "Samsung" H 5750 4450 60  0001 C CNN "Manufacturer"
+F 5 "CL21A475KOFNNNE" H 5750 4450 60  0001 C CNN "Manufacturer Part Number"
+	1    5750 4450
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR06
+U 1 1 5903D05D
+P 5750 4800
+F 0 "#PWR06" H 5750 4550 50  0001 C CNN
+F 1 "GND" H 5750 4650 50  0000 C CNN
+F 2 "" H 5750 4800 50  0000 C CNN
+F 3 "" H 5750 4800 50  0000 C CNN
+	1    5750 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C8
+U 1 1 5903D067
+P 5350 4650
+F 0 "C8" H 5375 4750 50  0000 L CNN
+F 1 "1000pF" H 5050 4550 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 5388 4500 50  0001 C CNN
+F 3 "" H 5350 4650 50  0000 C CNN
+F 4 "MacroFab" H 5350 4650 60  0001 C CNN "Manufacturer"
+F 5 "MF-CAP-0603-1nF" H 5350 4650 60  0001 C CNN "Manufacturer Part Number"
+	1    5350 4650
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R9
+U 1 1 5903D072
+P 4800 4150
+F 0 "R9" V 4880 4150 50  0000 C CNN
+F 1 "28.7k" V 4800 4150 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 4730 4150 50  0001 C CNN
+F 3 "" H 4800 4150 50  0000 C CNN
+F 4 "Panasonic" V 4800 4150 60  0001 C CNN "Manufacturer"
+F 5 "ERJ-3EKF2872V" V 4800 4150 60  0001 C CNN "Manufacturer Part Number"
+F 6 "Digikey" V 4800 4150 60  0001 C CNN "Supplier 1"
+F 7 "P28.7KHCT-ND" V 4800 4150 60  0001 C CNN "Supplier 1 Part Number"
+	1    4800 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C6
+U 1 1 5903D07D
+P 4450 4150
+F 0 "C6" H 4475 4250 50  0000 L CNN
+F 1 "0.01uF" H 4475 4050 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 4488 4000 50  0001 C CNN
+F 3 "" H 4450 4150 50  0000 C CNN
+F 4 "MacroFab" H 4450 4150 60  0001 C CNN "Manufacturer"
+F 5 "MF-CAP-0603-0.01uF" H 4450 4150 60  0001 C CNN "Manufacturer Part Number"
+	1    4450 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R7
+U 1 1 5903D088
+P 2850 3600
+F 0 "R7" V 2930 3600 50  0000 C CNN
+F 1 "100k" V 2850 3600 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 2780 3600 50  0001 C CNN
+F 3 "" H 2850 3600 50  0000 C CNN
+F 4 "MacroFab" V 2850 3600 60  0001 C CNN "Manufacturer"
+F 5 "MF-RES-0603-100K" V 2850 3600 60  0001 C CNN "Manufacturer Part Number"
+	1    2850 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L PTC RT1
+U 1 1 5903D095
+P 3750 3350
+F 0 "RT1" V 3850 3400 50  0000 C CNN
+F 1 "100k" V 3650 3350 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" H 3750 3350 60  0001 C CNN
+F 3 "" H 3750 3350 60  0000 C CNN
+F 4 "Murata" V 3750 3350 60  0001 C CNN "Manufacturer"
+F 5 "NCP18WF104J03RB" V 3750 3350 60  0001 C CNN "Manufacturer Part Number"
+F 6 "Digikey" V 3750 3350 60  0001 C CNN "Supplier 1"
+F 7 "490-2430-1-ND" V 3750 3350 60  0001 C CNN "Supplier 1 Part Number"
+	1    3750 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R3
+U 1 1 5903D0A0
+P 4150 3100
+F 0 "R3" V 4230 3100 50  0000 C CNN
+F 1 "18k" V 4150 3100 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 4080 3100 50  0001 C CNN
+F 3 "" H 4150 3100 50  0000 C CNN
+F 4 "MacroFab" V 4150 3100 60  0001 C CNN "Manufacturer"
+F 5 "MF-RES-0603-18K" V 4150 3100 60  0001 C CNN "Manufacturer Part Number"
+	1    4150 3100
+	0    1    1    0   
+$EndComp
+$Comp
+L GND #PWR07
+U 1 1 5903D0A7
+P 3750 3600
+F 0 "#PWR07" H 3750 3350 50  0001 C CNN
+F 1 "GND" H 3750 3450 50  0000 C CNN
+F 2 "" H 3750 3600 50  0000 C CNN
+F 3 "" H 3750 3600 50  0000 C CNN
+	1    3750 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R6
+U 1 1 5903D0B1
+P 3400 3400
+F 0 "R6" V 3480 3400 50  0000 C CNN
+F 1 "100k" V 3400 3400 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 3330 3400 50  0001 C CNN
+F 3 "" H 3400 3400 50  0000 C CNN
+F 4 "MacroFab" V 3400 3400 60  0001 C CNN "Manufacturer"
+F 5 "MF-RES-0603-100K" V 3400 3400 60  0001 C CNN "Manufacturer Part Number"
+	1    3400 3400
+	-1   0    0    1   
+$EndComp
+$Comp
+L R R1
+U 1 1 5903D0BC
+P 3400 2850
+F 0 "R1" V 3300 2800 50  0000 C CNN
+F 1 "680k" V 3400 2850 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 3330 2850 50  0001 C CNN
+F 3 "" H 3400 2850 50  0000 C CNN
+F 4 "MacroFab" V 3400 2850 60  0001 C CNN "Manufacturer"
+F 5 "MF-RES-0603-680K" V 3400 2850 60  0001 C CNN "Manufacturer Part Number"
+	1    3400 2850
+	-1   0    0    1   
+$EndComp
+$Comp
+L GND #PWR08
+U 1 1 5903D0C3
+P 3400 3550
+F 0 "#PWR08" H 3400 3300 50  0001 C CNN
+F 1 "GND" H 3400 3400 50  0000 C CNN
+F 2 "" H 3400 3550 50  0000 C CNN
+F 3 "" H 3400 3550 50  0000 C CNN
+	1    3400 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L +3.3V #PWR09
+U 1 1 5903D0C9
+P 2850 3450
+F 0 "#PWR09" H 2850 3300 50  0001 C CNN
+F 1 "+3.3V" H 2850 3590 50  0000 C CNN
+F 2 "" H 2850 3450 50  0000 C CNN
+F 3 "" H 2850 3450 50  0000 C CNN
+	1    2850 3450
+	1    0    0    -1  
+$EndComp
+Text Notes 4900 4600 1    50   ~ 0
+375kHz
+$Comp
+L C C3
+U 1 1 5903D0D4
+P 2800 2850
+F 0 "C3" H 2825 2950 50  0000 L CNN
+F 1 "10uF" H 2950 2900 50  0000 L CNN
+F 2 "Capacitors_SMD:C_1206" H 2838 2700 50  0001 C CNN
+F 3 "" H 2800 2850 50  0000 C CNN
+F 4 "Samsung" H 2800 2850 60  0001 C CNN "Manufacturer"
+F 5 "CL31A106MBHNNNE" H 2800 2850 60  0001 C CNN "Manufacturer Part Number"
+F 6 "50V" H 2950 2800 50  0000 L CNN "Voltage"
+F 7 "1206" H 2950 2600 50  0000 L CNN "DisplayFootprint"
+F 8 "X5R" H 2950 2700 50  0000 L CNN "TempCo"
+	1    2800 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R10
+U 1 1 5903D0E5
+P 5350 4350
+F 0 "R10" V 5430 4350 50  0000 C CNN
+F 1 "10k" V 5350 4350 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 5280 4350 50  0001 C CNN
+F 3 "" H 5350 4350 50  0000 C CNN
+F 4 "MacroFab" V 5350 4350 60  0001 C CNN "Manufacturer"
+F 5 "MF-RES-0603-10K" V 5350 4350 60  0001 C CNN "Manufacturer Part Number"
+	1    5350 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R2
+U 1 1 5903D0F0
+P 8450 2850
+F 0 "R2" V 8530 2850 50  0000 C CNN
+F 1 "825k" V 8450 2850 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 8380 2850 50  0001 C CNN
+F 3 "" H 8450 2850 50  0000 C CNN
+F 4 "MacroFab" V 8450 2850 60  0001 C CNN "Manufacturer"
+F 5 "MF-RES-0603-825K" V 8450 2850 60  0001 C CNN "Manufacturer Part Number"
+	1    8450 2850
+	-1   0    0    1   
+$EndComp
+$Comp
+L R R4
+U 1 1 5903D0FB
+P 7700 3150
+F 0 "R4" V 7780 3150 50  0000 C CNN
+F 1 "39mR" V 7600 3150 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 7630 3150 50  0001 C CNN
+F 3 "" H 7700 3150 50  0000 C CNN
+F 4 "Panasonic" V 7700 3150 60  0001 C CNN "Manufacturer"
+F 5 "ERJ-3BWFR039V" V 7700 3150 60  0001 C CNN "Manufacturer Part Number"
+	1    7700 3150
+	-1   0    0    1   
+$EndComp
+$Comp
+L R R5
+U 1 1 5903D111
+P 8450 3250
+F 0 "R5" V 8530 3250 50  0000 C CNN
+F 1 "15k" V 8450 3250 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 8380 3250 50  0001 C CNN
+F 3 "" H 8450 3250 50  0000 C CNN
+F 4 "MacroFab" V 8450 3250 60  0001 C CNN "Manufacturer"
+F 5 "MF-RES-0603-15K" V 8450 3250 60  0001 C CNN "Manufacturer Part Number"
+	1    8450 3250
+	1    0    0    -1  
+$EndComp
+Text Notes 8600 3400 0    50   ~ 0
+Vfb = 1.25 V\nVmax = 70 V
+Text Label 4500 3400 0    50   ~ 0
+CTRL
+Text Label 4500 3000 0    50   ~ 0
+~SHDN
+Text Label 2750 4600 0    50   ~ 0
+~SHDN
+$Comp
+L GND #PWR010
+U 1 1 5903D127
+P 2750 4800
+F 0 "#PWR010" H 2750 4550 50  0001 C CNN
+F 1 "GND" H 2750 4650 50  0000 C CNN
+F 2 "" H 2750 4800 50  0000 C CNN
+F 3 "" H 2750 4800 50  0000 C CNN
+	1    2750 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X02 J2
+U 1 1 5903D131
+P 2450 4650
+F 0 "J2" H 2450 4800 50  0000 C CNN
+F 1 "SAFETY" V 2550 4650 50  0000 C CNN
+F 2 "Socket_Strips:Socket_Strip_Straight_1x02_Pitch2.54mm" H 2450 4650 50  0001 C CNN
+F 3 "" H 2450 4650 50  0000 C CNN
+F 4 "MacroFab" H 2450 4650 60  0001 C CNN "Manufacturer"
+F 5 "MF-CON-2.54mm-01x02" H 2450 4650 60  0001 C CNN "Manufacturer Part Number"
+	1    2450 4650
+	-1   0    0    -1  
+$EndComp
+Text Notes 2900 4850 0    50   ~ 0
+Remove\nbefore\nflight!
+Wire Wire Line
+	5750 4300 6150 4300
+Wire Wire Line
+	5750 4300 5750 4200
+Wire Wire Line
+	6500 2700 6950 2700
+Wire Wire Line
+	6800 3350 6800 2700
+Connection ~ 6800 2700
+Wire Wire Line
+	6500 3550 6400 3550
+Wire Wire Line
+	6800 3850 6800 3750
+Wire Wire Line
+	6800 3750 6400 3750
+Wire Wire Line
+	6400 3750 6400 3650
+Wire Wire Line
+	6400 3900 6600 3900
+Wire Wire Line
+	7700 2700 7700 3000
+Wire Wire Line
+	6400 3450 6400 3300
+Wire Wire Line
+	6400 3300 7700 3300
+Wire Wire Line
+	6400 3150 7500 3150
+Wire Wire Line
+	7500 3150 7500 3000
+Connection ~ 7700 2700
+Wire Wire Line
+	8450 3000 8450 3100
+Wire Wire Line
+	8450 3050 8050 3050
+Wire Wire Line
+	8050 3050 8050 2800
+Wire Wire Line
+	8050 2800 7300 2800
+Wire Wire Line
+	7300 2800 7300 3050
+Wire Wire Line
+	7300 3050 6400 3050
+Connection ~ 8450 3050
+Connection ~ 8450 2700
+Wire Wire Line
+	5750 4800 5750 4600
+Wire Wire Line
+	5550 4800 5550 4200
+Wire Wire Line
+	4450 4800 5750 4800
+Connection ~ 5550 4800
+Connection ~ 5750 4800
+Wire Wire Line
+	4800 4300 4800 4800
+Connection ~ 5350 4800
+Wire Wire Line
+	4900 3900 4800 3900
+Wire Wire Line
+	4800 3900 4800 4000
+Wire Wire Line
+	4450 3800 4900 3800
+Connection ~ 4800 4800
+Wire Wire Line
+	4050 3700 4900 3700
+Wire Wire Line
+	3950 3400 4900 3400
+Wire Wire Line
+	3400 3000 4900 3000
+Connection ~ 5700 2700
+Wire Wire Line
+	7500 3000 7700 3000
+Connection ~ 7700 3000
+Connection ~ 7700 3300
+Wire Wire Line
+	2750 4800 2750 4700
+Wire Wire Line
+	2750 4700 2650 4700
+Wire Wire Line
+	2650 4600 2750 4600
+Wire Wire Line
+	6600 3900 6600 4900
+Wire Wire Line
+	6600 4900 7400 4900
+Text Label 7850 3950 0    50   ~ 0
+LED_ANODE
+Text Label 7850 4250 0    50   ~ 0
+LED_CATHODE
+Wire Wire Line
+	4450 4800 4450 4300
+Wire Wire Line
+	4450 4000 4450 3800
+$Comp
+L CONN_01X04 J1
+U 1 1 5906322F
+P 9150 4100
+F 0 "J1" H 9150 4350 50  0000 C CNN
+F 1 "CONN_01X04" V 9250 4100 50  0000 C CNN
+F 2 "Reclaimer_Labs:Header_04x01_2.5mm_RA" H 9150 4100 50  0001 C CNN
+F 3 "" H 9150 4100 50  0001 C CNN
+F 4 "JST" H 9150 4100 60  0001 C CNN "Manufacturer"
+F 5 "S4B-EH(LF)(SN)" H 9150 4100 60  0001 C CNN "Manufacturer Part Number"
+	1    9150 4100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7700 3300 7700 3950
+Wire Wire Line
+	7700 3950 8950 3950
+Wire Wire Line
+	8950 4250 7700 4250
+Wire Wire Line
+	7700 4250 7700 4700
+Connection ~ 2850 3850
+Text Label 4500 3100 0    50   ~ 0
+VREF
+Wire Wire Line
+	3400 3000 3400 3250
+Connection ~ 3400 2700
+$Comp
+L C C2
+U 1 1 5906DE3D
+P 2350 2850
+F 0 "C2" H 2375 2950 50  0000 L CNN
+F 1 "10uF" H 2500 2900 50  0000 L CNN
+F 2 "Capacitors_SMD:C_1206" H 2388 2700 50  0001 C CNN
+F 3 "" H 2350 2850 50  0000 C CNN
+F 4 "Samsung" H 2350 2850 60  0001 C CNN "Manufacturer"
+F 5 "CL31A106MBHNNNE" H 2350 2850 60  0001 C CNN "Manufacturer Part Number"
+F 6 "50V" H 2500 2800 50  0000 L CNN "Voltage"
+F 7 "1206" H 2500 2600 50  0000 L CNN "DisplayFootprint"
+F 8 "X5R" H 2500 2700 50  0000 L CNN "TempCo"
+	1    2350 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C1
+U 1 1 5906DEAC
+P 1850 2850
+F 0 "C1" H 1875 2950 50  0000 L CNN
+F 1 "10uF" H 2000 2900 50  0000 L CNN
+F 2 "Capacitors_SMD:C_1206" H 1888 2700 50  0001 C CNN
+F 3 "" H 1850 2850 50  0000 C CNN
+F 4 "Samsung" H 1850 2850 60  0001 C CNN "Manufacturer"
+F 5 "CL31A106MBHNNNE" H 1850 2850 60  0001 C CNN "Manufacturer Part Number"
+F 6 "50V" H 2000 2800 50  0000 L CNN "Voltage"
+F 7 "1206" H 2000 2600 50  0000 L CNN "DisplayFootprint"
+F 8 "X5R" H 2000 2700 50  0000 L CNN "TempCo"
+	1    1850 2850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1850 2600 1850 2700
+Wire Wire Line
+	1850 2700 5900 2700
+Connection ~ 2350 2700
+$Comp
+L GND #PWR011
+U 1 1 5906EC26
+P 1850 3200
+F 0 "#PWR011" H 1850 2950 50  0001 C CNN
+F 1 "GND" H 1850 3050 50  0000 C CNN
+F 2 "" H 1850 3200 50  0000 C CNN
+F 3 "" H 1850 3200 50  0000 C CNN
+	1    1850 3200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1850 3200 1850 3000
+Wire Wire Line
+	2350 3000 2350 3150
+Wire Wire Line
+	1850 3150 2800 3150
+Connection ~ 1850 3150
+Wire Wire Line
+	2800 3150 2800 3000
+Connection ~ 2350 3150
+Connection ~ 2800 2700
+$Comp
+L C C4
+U 1 1 5906F89C
+P 9000 2850
+F 0 "C4" H 9025 2950 50  0000 L CNN
+F 1 "4.7uF" H 9150 2900 50  0000 L CNN
+F 2 "Capacitors_SMD:C_1206" H 9038 2700 50  0001 C CNN
+F 3 "" H 9000 2850 50  0000 C CNN
+F 4 "Taiyo Yuden" H 9000 2850 60  0001 C CNN "Manufacturer"
+F 5 "HMK325BJ475KM-PE" H 9000 2850 60  0001 C CNN "Manufacturer Part Number"
+F 6 "100V" H 9150 2800 50  0000 L CNN "Voltage"
+F 7 "1210" H 9150 2600 50  0000 L CNN "DisplayFootprint"
+F 8 "X5R" H 9150 2700 50  0000 L CNN "TempCo"
+	1    9000 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C5
+U 1 1 590706CF
+P 9550 2850
+F 0 "C5" H 9575 2950 50  0000 L CNN
+F 1 "4.7uF" H 9700 2900 50  0000 L CNN
+F 2 "Capacitors_SMD:C_1206" H 9588 2700 50  0001 C CNN
+F 3 "" H 9550 2850 50  0000 C CNN
+F 4 "Taiyo Yuden" H 9550 2850 60  0001 C CNN "Manufacturer"
+F 5 "HMK325BJ475KM-PE" H 9550 2850 60  0001 C CNN "Manufacturer Part Number"
+F 6 "100V" H 9700 2800 50  0000 L CNN "Voltage"
+F 7 "1210" H 9700 2600 50  0000 L CNN "DisplayFootprint"
+F 8 "X5R" H 9700 2700 50  0000 L CNN "TempCo"
+	1    9550 2850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9550 3150 9550 3000
+Wire Wire Line
+	9550 3150 9000 3150
+Wire Wire Line
+	9000 3150 9000 3000
+Wire Wire Line
+	7250 2700 9550 2700
+Connection ~ 9000 2700
+Wire Wire Line
+	4300 3100 4900 3100
+Wire Wire Line
+	3950 3400 3950 3100
+Wire Wire Line
+	3750 3100 4000 3100
+Connection ~ 3950 3100
+Wire Wire Line
+	2850 3750 2850 3850
+Wire Wire Line
+	2300 3850 3950 3850
+Wire Wire Line
+	3950 3850 3950 3600
+Wire Wire Line
+	3950 3600 4900 3600
+Wire Wire Line
+	4050 3700 4050 3950
+Wire Wire Line
+	4050 3950 2300 3950
+Text GLabel 2300 3850 0    50   Output ~ 0
+OPENLED_L
+Text GLabel 2300 3950 0    50   Input ~ 0
+PWMIN
+Text GLabel 2300 4050 0    50   Input ~ 0
+CTRL
+Wire Wire Line
+	2300 4050 4150 4050
+Wire Wire Line
+	4150 4050 4150 3400
+Connection ~ 4150 3400
+Text GLabel 2300 4150 0    50   Input ~ 0
+SHDN_L
+Wire Wire Line
+	2300 4150 3550 4150
+Wire Wire Line
+	3550 4150 3550 3000
+Connection ~ 3550 3000
+Text Label 7000 4900 0    50   ~ 0
+PWMOUT
+NoConn ~ 6150 4300
+Text Notes 3150 2550 0    50   ~ 0
+V_ULVO = 1.22 V @ pin 12 falling\nV_ULVO_rising = 2.1 uA * Rtop + V_falling\nV_falling = 9.516 V\nV_rising = 10.94 V\nValues chosen to match MacroFab House Parts\n
+Text Label 7850 4050 0    50   ~ 0
+CTRL
+$Comp
+L GND #PWR012
+U 1 1 590798C1
+P 8800 4400
+F 0 "#PWR012" H 8800 4150 50  0001 C CNN
+F 1 "GND" H 8800 4250 50  0000 C CNN
+F 2 "" H 8800 4400 50  0000 C CNN
+F 3 "" H 8800 4400 50  0000 C CNN
+	1    8800 4400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8800 4400 8800 4150
+Wire Wire Line
+	8800 4150 8950 4150
+Wire Wire Line
+	8950 4050 7850 4050
+Text Notes 8250 4950 0    50   ~ 0
+DNP RT1 and install \nNXRT15WF104FA1B030\nto the LED heatsink\nto measure LED temp
+Text Notes 7750 3850 0    50   ~ 0
+I_LED = 100 mV / R_led\nwhen V_CTRL >= 1.2 V\n@ 39 mOhm, Iled = 2.5A
+Text Notes 6950 4150 0    50   ~ 0
+R_sense <= \nVin * 0.07 V / \n(Vled * Iled)
+$Comp
+L Q_NMOS_SGD Q2
+U 1 1 590ACBF4
+P 7600 4900
+F 0 "Q2" H 7900 4950 50  0000 R CNN
+F 1 "DMT6016" H 8150 4850 50  0000 R CNN
+F 2 "Reclaimer_Labs:POWERDI5060-8" H 7800 5000 50  0001 C CNN
+F 3 "" H 7600 4900 50  0000 C CNN
+F 4 "Diodes Inc" H 7600 4900 60  0001 C CNN "Manufacturer"
+F 5 "DMT6016LPS-13" H 7600 4900 60  0001 C CNN "Manufacturer Part Number"
+	1    7600 4900
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C29
+U 1 1 591062E2
+P 5850 2250
+F 0 "C29" V 5650 2350 50  0000 L CNN
+F 1 "4.7uF" V 5750 2350 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 5888 2100 50  0001 C CNN
+F 3 "" H 5850 2250 50  0000 C CNN
+F 4 "Samsung" H 5850 2250 60  0001 C CNN "Manufacturer"
+F 5 "CL21A475KOFNNNE" H 5850 2250 60  0001 C CNN "Manufacturer Part Number"
+	1    5850 2250
+	0    1    1    0   
+$EndComp
+$Comp
+L GND #PWR013
+U 1 1 59106770
+P 6100 2250
+F 0 "#PWR013" H 6100 2000 50  0001 C CNN
+F 1 "GND" H 6100 2100 50  0000 C CNN
+F 2 "" H 6100 2250 50  0000 C CNN
+F 3 "" H 6100 2250 50  0000 C CNN
+	1    6100 2250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6000 2250 6100 2250
+Wire Wire Line
+	5700 2250 5700 2700
+Text Label 4500 3800 0    60   ~ 0
+SS
+Text Label 4800 3900 0    60   ~ 0
+RT
+Text Label 6450 3750 0    50   ~ 0
+SENSE
+Text Label 6450 3050 0    50   ~ 0
+FB
+Text Label 6450 3150 0    50   ~ 0
+ISP
+Text Label 6650 2700 0    50   ~ 0
+LX
+Text Label 7500 2700 0    50   ~ 0
+BOOST_OUT
+$EndSCHEMATC

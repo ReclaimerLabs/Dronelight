@@ -1,0 +1,292 @@
+EESchema Schematic File Version 2
+LIBS:dronelight-rescue
+LIBS:Jason_Custom_Home
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:dronelight-cache
+EELAYER 25 0
+EELAYER END
+$Descr USLetter 11000 8500
+encoding utf-8
+Sheet 5 5
+Title "Dronelight"
+Date "2017-05-29"
+Rev "2"
+Comp "Reclaimer Labs LLC"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Photo_Trans Q3
+U 1 1 5923E982
+P 2900 3700
+F 0 "Q3" H 2950 3800 60  0000 L CNN
+F 1 "Photo_Trans" H 2950 3700 60  0000 L CNN
+F 2 "Reclaimer_Labs:Photo_Trans_ALS-PT19-315C" H 2900 3700 60  0001 C CNN
+F 3 "" H 2900 3700 60  0000 C CNN
+F 4 "Everlight" H 2900 3700 60  0001 C CNN "Manufacturer"
+F 5 "ALS-PT19-315C/L177/TR8" H 2900 3700 60  0001 C CNN "Manufacturer Part Number"
+	1    2900 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L +3.3V #PWR063
+U 1 1 5923E989
+P 2900 3550
+F 0 "#PWR063" H 2900 3400 50  0001 C CNN
+F 1 "+3.3V" H 2900 3690 50  0000 C CNN
+F 2 "" H 2900 3550 50  0000 C CNN
+F 3 "" H 2900 3550 50  0000 C CNN
+	1    2900 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR064
+U 1 1 5923E98F
+P 2900 4250
+F 0 "#PWR064" H 2900 4000 50  0001 C CNN
+F 1 "GND" H 2900 4100 50  0000 C CNN
+F 2 "" H 2900 4250 50  0001 C CNN
+F 3 "" H 2900 4250 50  0001 C CNN
+	1    2900 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R18
+U 1 1 5923E997
+P 2900 4100
+F 0 "R18" V 2980 4100 50  0000 C CNN
+F 1 "10k" V 2900 4100 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 2830 4100 50  0001 C CNN
+F 3 "" H 2900 4100 50  0000 C CNN
+F 4 "MacroFab" V 2900 4100 60  0001 C CNN "Manufacturer"
+F 5 "MF-RES-0603-10K" V 2900 4100 60  0001 C CNN "Manufacturer Part Number"
+	1    2900 4100
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2900 3850 2900 3950
+Text GLabel 3600 3900 2    50   Output ~ 0
+PHOTO_SENSE
+Wire Wire Line
+	3600 3900 2900 3900
+Connection ~ 2900 3900
+$Comp
+L LPS22HB U5
+U 1 1 592405ED
+P 3750 2050
+F 0 "U5" H 3500 2500 50  0000 L CNN
+F 1 "LPS22HB" H 3500 2400 50  0000 L CNN
+F 2 "Reclaimer_Labs:LGA10R50P2X3_200X200X80" H 4250 1750 50  0001 C CNN
+F 3 "" H 4250 1750 50  0001 C CNN
+F 4 "ST" H 3750 2050 60  0001 C CNN "Manufacturer"
+F 5 "LPS22HBTR" H 3750 2050 60  0001 C CNN "Manufacturer Part Number"
+	1    3750 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR065
+U 1 1 59240888
+P 3050 2450
+F 0 "#PWR065" H 3050 2200 50  0001 C CNN
+F 1 "GND" H 3050 2300 50  0000 C CNN
+F 2 "" H 3050 2450 50  0001 C CNN
+F 3 "" H 3050 2450 50  0001 C CNN
+	1    3050 2450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3050 2450 3050 2050
+Wire Wire Line
+	3050 2050 3150 2050
+Wire Wire Line
+	3150 2150 3050 2150
+Connection ~ 3050 2150
+Wire Wire Line
+	3150 2250 3050 2250
+Connection ~ 3050 2250
+$Comp
+L GND #PWR066
+U 1 1 59240DEB
+P 2550 2450
+F 0 "#PWR066" H 2550 2200 50  0001 C CNN
+F 1 "GND" H 2550 2300 50  0000 C CNN
+F 2 "" H 2550 2450 50  0001 C CNN
+F 3 "" H 2550 2450 50  0001 C CNN
+	1    2550 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C30
+U 1 1 59240DF4
+P 2550 2000
+F 0 "C30" H 2575 2100 50  0000 L CNN
+F 1 "0.1uF" H 2575 1900 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0402" H 2588 1850 50  0001 C CNN
+F 3 "" H 2550 2000 50  0001 C CNN
+F 4 "MacroFab" H 2550 2000 60  0001 C CNN "Manufacturer"
+F 5 "MF-CAP-0402-0.1uF" H 2550 2000 60  0001 C CNN "Manufacturer Part Number"
+F 6 "0402" H 2700 1800 60  0000 C CNN "DisplayFootprint"
+	1    2550 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L +3.3V #PWR067
+U 1 1 59240E09
+P 2550 1750
+F 0 "#PWR067" H 2550 1600 50  0001 C CNN
+F 1 "+3.3V" H 2550 1890 50  0000 C CNN
+F 2 "" H 2550 1750 50  0000 C CNN
+F 3 "" H 2550 1750 50  0000 C CNN
+	1    2550 1750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2550 1750 2550 1850
+Wire Wire Line
+	2550 1850 3150 1850
+Wire Wire Line
+	3150 1950 3050 1950
+Wire Wire Line
+	3050 1950 3050 1850
+Connection ~ 3050 1850
+Wire Wire Line
+	2550 2450 2550 2150
+Text GLabel 4600 1850 2    50   BiDi ~ 0
+SCL
+Text GLabel 4600 1950 2    50   BiDi ~ 0
+SDA
+$Comp
+L +3.3V #PWR068
+U 1 1 5924118A
+P 4450 1750
+F 0 "#PWR068" H 4450 1600 50  0001 C CNN
+F 1 "+3.3V" H 4450 1890 50  0000 C CNN
+F 2 "" H 4450 1750 50  0000 C CNN
+F 3 "" H 4450 1750 50  0000 C CNN
+	1    4450 1750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4450 1750 4450 2150
+Wire Wire Line
+	4450 2050 4350 2050
+Wire Wire Line
+	4450 2150 4350 2150
+Connection ~ 4450 2050
+Wire Wire Line
+	4600 1950 4350 1950
+Wire Wire Line
+	4350 1850 4600 1850
+$Comp
+L SPK0415HM4H-B U4
+U 1 1 592A4266
+P 3300 5600
+F 0 "U4" H 2900 5900 60  0000 L CNN
+F 1 "SPK0415HM4H-B" H 2900 5800 60  0000 L CNN
+F 2 "Reclaimer_Labs:SPK0415HM4H-8" H 3300 5600 60  0001 C CNN
+F 3 "" H 3300 5600 60  0001 C CNN
+F 4 "Knowles" H 3300 5600 60  0001 C CNN "Manufacturer"
+F 5 "SPK0415HM4H-B-7" H 3300 5600 60  0001 C CNN "Manufacturer Part Number"
+	1    3300 5600
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C31
+U 1 1 592A42A8
+P 4250 5750
+F 0 "C31" H 4275 5850 50  0000 L CNN
+F 1 "0.1uF" H 4275 5650 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0402" H 4288 5600 50  0001 C CNN
+F 3 "" H 4250 5750 50  0001 C CNN
+F 4 "MacroFab" H 4250 5750 60  0001 C CNN "Manufacturer"
+F 5 "MF-CAP-0402-0.1uF" H 4250 5750 60  0001 C CNN "Manufacturer Part Number"
+F 6 "0402" H 4400 5550 60  0000 C CNN "DisplayFootprint"
+	1    4250 5750
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR069
+U 1 1 592A4312
+P 4250 6000
+F 0 "#PWR069" H 4250 5750 50  0001 C CNN
+F 1 "GND" H 4250 5850 50  0000 C CNN
+F 2 "" H 4250 6000 50  0001 C CNN
+F 3 "" H 4250 6000 50  0001 C CNN
+	1    4250 6000
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR070
+U 1 1 592A4332
+P 4000 6000
+F 0 "#PWR070" H 4000 5750 50  0001 C CNN
+F 1 "GND" H 4000 5850 50  0000 C CNN
+F 2 "" H 4000 6000 50  0001 C CNN
+F 3 "" H 4000 6000 50  0001 C CNN
+	1    4000 6000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4000 6000 4000 5800
+Wire Wire Line
+	4000 5800 3900 5800
+Wire Wire Line
+	4250 5900 4250 6000
+Wire Wire Line
+	3900 5600 4250 5600
+Wire Wire Line
+	4250 5600 4250 5500
+$Comp
+L +3.3V #PWR071
+U 1 1 592A45B3
+P 4250 5500
+F 0 "#PWR071" H 4250 5350 50  0001 C CNN
+F 1 "+3.3V" H 4250 5640 50  0000 C CNN
+F 2 "" H 4250 5500 50  0000 C CNN
+F 3 "" H 4250 5500 50  0000 C CNN
+	1    4250 5500
+	1    0    0    -1  
+$EndComp
+NoConn ~ 2700 5800
+Text Notes 2650 6050 0    50   ~ 0
+SELECT is pulled low internally. 
+Text GLabel 2400 5600 0    50   Input ~ 0
+MIC_CLK
+Text GLabel 2400 5700 0    50   Output ~ 0
+MIC_DATA
+Wire Wire Line
+	2400 5600 2700 5600
+Wire Wire Line
+	2700 5700 2400 5700
+NoConn ~ 4350 2250
+$EndSCHEMATC

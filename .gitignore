@@ -8,6 +8,9 @@ Desktop.ini
 # Recycle Bin used on file shares
 $RECYCLE.BIN/
 
+# Big datasheets
+documention/datasheets/
+
 # Windows Installer files
 *.cab
 *.msi
@@ -47,3 +50,5 @@ Temporary Items
 .apdisk
 *.bak
 *.kicad_pcb-bak
+documentation/datasheets/nRF52840_Engineering_A_Errata_v1.2.pdf
+documentation/datasheets/nRF52840_OPS_v0.5.1.pdf

@@ -1,16 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <export version="D">
   <design>
-    <source>D:\Projects\DroneLight\electrical\dronelight.sch</source>
-    <date>2/18/2016 01:10:29</date>
-    <tool>Eeschema 4.0.1-stable</tool>
+    <source>D:/Projects/DroneLight/electrical/dronelight.sch</source>
+    <date>5/29/2017 14:19:37</date>
+    <tool>Eeschema 4.0.6</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
-        <title/>
-        <company/>
-        <rev/>
-        <date/>
+        <title>Dronelight</title>
+        <company>Reclaimer Labs LLC</company>
+        <rev>2</rev>
+        <date>2017-05-29</date>
         <source>dronelight.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="2" name="/LED Driver Boost/" tstamps="/5903B0F0/">
+      <title_block>
+        <title>Dronelight</title>
+        <company>Reclaimer Labs LLC</company>
+        <rev>2</rev>
+        <date>2017-05-29</date>
+        <source>LED_Driver_Boost.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="3" name="/nrf52840/" tstamps="/5903F159/">
+      <title_block>
+        <title>Dronelight</title>
+        <company>Reclaimer Labs LLC</company>
+        <rev>2</rev>
+        <date>2017-05-29</date>
+        <source>nrf52840.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="4" name="/Connectors and Misc/" tstamps="/5903F1D0/">
+      <title_block>
+        <title>Dronelight</title>
+        <company>Reclaimer Labs LLC</company>
+        <rev>2</rev>
+        <date>2017-05-29</date>
+        <source>Connectors_Misc.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="5" name="/Sensors/" tstamps="/5923E530/">
+      <title_block>
+        <title>Dronelight</title>
+        <company>Reclaimer Labs LLC</company>
+        <rev>2</rev>
+        <date>2017-05-29</date>
+        <source>Sensors.sch</source>
         <comment number="1" value=""/>
         <comment number="2" value=""/>
         <comment number="3" value=""/>
@@ -19,102 +71,92 @@
     </sheet>
   </design>
   <components>
-    <comp ref="J5">
-      <value>XT60</value>
+    <comp ref="D1">
+      <value>FSV8100V</value>
+      <footprint>Reclaimer_Labs:TO-277_3L_Diode</footprint>
       <fields>
-        <field name="Supplier 1">Sparkfun</field>
-        <field name="Supplier 1 Part Number">PRT-10474</field>
-      </fields>
-      <libsource lib="conn" part="CONN_01X02"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>56BD9B74</tstamp>
-    </comp>
-    <comp ref="D4">
-      <value>B550C</value>
-      <fields>
-        <field name="Manufacturer">Diodes Inc</field>
-        <field name="Manufacturer Part Number">B550C-13-F</field>
+        <field name="Manufacturer">Fairchild-ON</field>
+        <field name="Manufacturer Part Number">FSV8100V</field>
         <field name="Supplier 1">Digikey</field>
-        <field name="Supplier 1 Part Number">B550C-FDICT-ND</field>
+        <field name="Supplier 1 Part Number">FSV8100VCT-ND</field>
       </fields>
       <libsource lib="device" part="D_Schottky"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>56BD9DB6</tstamp>
+      <sheetpath names="/LED Driver Boost/" tstamps="/5903B0F0/"/>
+      <tstamp>5903D007</tstamp>
     </comp>
-    <comp ref="L2">
+    <comp ref="L1">
       <value>22uH</value>
+      <footprint>Reclaimer_Labs:Inductor_DR127</footprint>
       <fields>
         <field name="Manufacturer">Eaton</field>
         <field name="Manufacturer Part Number">DR127-220-R</field>
         <field name="Supplier 1">Digikey</field>
         <field name="Supplier 1 Part Number">513-1044-1-ND</field>
       </fields>
-      <libsource lib="device" part="INDUCTOR"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>56BD9E2D</tstamp>
+      <libsource lib="dronelight-cache" part="INDUCTOR"/>
+      <sheetpath names="/LED Driver Boost/" tstamps="/5903B0F0/"/>
+      <tstamp>5903D012</tstamp>
     </comp>
     <comp ref="U1">
       <value>LT3755-2-MSE</value>
+      <footprint>Housings_SSOP:MSOP-16-1EP_3x4mm_Pitch0.5mm</footprint>
       <fields>
         <field name="Manufacturer">Linear</field>
-        <field name="Manufacturer Part Number">LT3755EMSE#PBF</field>
+        <field name="Manufacturer Part Number">LT3755EMSE-2#PBF</field>
         <field name="Supplier 1">Digikey</field>
-        <field name="Supplier 1 Part Number">LT3755EMSE#PBF-ND</field>
+        <field name="Supplier 1 Part Number">LT3755EMSE-2#PBF-ND</field>
       </fields>
       <libsource lib="Jason_Custom_Home" part="LT3755-2-MSE"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>56BD9A35</tstamp>
+      <sheetpath names="/LED Driver Boost/" tstamps="/5903B0F0/"/>
+      <tstamp>5903D01D</tstamp>
     </comp>
     <comp ref="Q1">
       <value>DMT6016</value>
+      <footprint>Reclaimer_Labs:POWERDI5060-8</footprint>
       <fields>
         <field name="Manufacturer">Diodes Inc</field>
         <field name="Manufacturer Part Number">DMT6016LPS-13</field>
-        <field name="Supplier 1">Digikey</field>
-        <field name="Supplier 1 Part Number">DMT6016LPS-13DICT-ND</field>
       </fields>
-      <libsource lib="device" part="Q_NMOS_DGS"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>56BD9FA0</tstamp>
+      <libsource lib="device" part="Q_NMOS_SGD"/>
+      <sheetpath names="/LED Driver Boost/" tstamps="/5903B0F0/"/>
+      <tstamp>5903D028</tstamp>
     </comp>
-    <comp ref="R16">
-      <value>0.005R</value>
+    <comp ref="R8">
+      <value>0.0005R</value>
+      <footprint>Reclaimer_Labs:CST0612</footprint>
       <fields>
         <field name="Manufacturer">Bourns</field>
-        <field name="Manufacturer Part Number">CRF0805-FX-R005ELF</field>
-        <field name="Supplier 1">Digikey</field>
-        <field name="Supplier 1 Part Number">CRF0805-FX-R005ELFCT-ND</field>
+        <field name="Manufacturer Part Number">CST0612-FC-R0005-E</field>
       </fields>
       <libsource lib="device" part="R"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>56BDA059</tstamp>
+      <sheetpath names="/LED Driver Boost/" tstamps="/5903B0F0/"/>
+      <tstamp>5903D033</tstamp>
     </comp>
-    <comp ref="C15">
+    <comp ref="C7">
       <value>4.7uF</value>
+      <footprint>Capacitors_SMD:C_0805</footprint>
       <fields>
         <field name="Manufacturer">Samsung</field>
         <field name="Manufacturer Part Number">CL21A475KOFNNNE</field>
-        <field name="Supplier 1">Digikey</field>
-        <field name="Supplier 1 Part Number">1276-1065-1-ND</field>
       </fields>
       <libsource lib="device" part="C"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>56BDD37A</tstamp>
+      <sheetpath names="/LED Driver Boost/" tstamps="/5903B0F0/"/>
+      <tstamp>5903D056</tstamp>
     </comp>
-    <comp ref="C14">
-      <value>1nF</value>
+    <comp ref="C8">
+      <value>1000pF</value>
+      <footprint>Capacitors_SMD:C_0603</footprint>
       <fields>
-        <field name="Manufacturer">Samsung</field>
-        <field name="Manufacturer Part Number">CL10B102KB8NNNC</field>
-        <field name="Supplier 1">Digikey</field>
-        <field name="Supplier 1 Part Number">1276-1018-1-ND</field>
+        <field name="Manufacturer">MacroFab</field>
+        <field name="Manufacturer Part Number">MF-CAP-0603-1nF</field>
       </fields>
       <libsource lib="device" part="C"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>56BDDAD9</tstamp>
+      <sheetpath names="/LED Driver Boost/" tstamps="/5903B0F0/"/>
+      <tstamp>5903D067</tstamp>
     </comp>
     <comp ref="R9">
       <value>28.7k</value>
+      <footprint>Resistors_SMD:R_0603</footprint>
       <fields>
         <field name="Manufacturer">Panasonic</field>
         <field name="Manufacturer Part Number">ERJ-3EKF2872V</field>
@@ -122,35 +164,34 @@
         <field name="Supplier 1 Part Number">P28.7KHCT-ND</field>
       </fields>
       <libsource lib="device" part="R"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>56BDDE94</tstamp>
+      <sheetpath names="/LED Driver Boost/" tstamps="/5903B0F0/"/>
+      <tstamp>5903D072</tstamp>
     </comp>
-    <comp ref="C11">
+    <comp ref="C6">
       <value>0.01uF</value>
+      <footprint>Capacitors_SMD:C_0603</footprint>
       <fields>
-        <field name="Manufacturer">Samsung</field>
-        <field name="Manufacturer Part Number">CL10B103KB8NCNC</field>
-        <field name="Supplier 1">Digikey</field>
-        <field name="Supplier 1 Part Number">1276-1921-1-ND</field>
+        <field name="Manufacturer">MacroFab</field>
+        <field name="Manufacturer Part Number">MF-CAP-0603-0.01uF</field>
       </fields>
       <libsource lib="device" part="C"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>56BDDF67</tstamp>
+      <sheetpath names="/LED Driver Boost/" tstamps="/5903B0F0/"/>
+      <tstamp>5903D07D</tstamp>
     </comp>
-    <comp ref="R5">
-      <value>10k</value>
+    <comp ref="R7">
+      <value>100k</value>
+      <footprint>Resistors_SMD:R_0603</footprint>
       <fields>
-        <field name="Manufacturer">Panasonic</field>
-        <field name="Manufacturer Part Number">ERJ-3EKF1002V</field>
-        <field name="Supplier 1">Digikey</field>
-        <field name="Supplier 1 Part Number">P10.0KHCT-ND</field>
+        <field name="Manufacturer">MacroFab</field>
+        <field name="Manufacturer Part Number">MF-RES-0603-100K</field>
       </fields>
       <libsource lib="device" part="R"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>56BDE3E7</tstamp>
+      <sheetpath names="/LED Driver Boost/" tstamps="/5903B0F0/"/>
+      <tstamp>5903D088</tstamp>
     </comp>
     <comp ref="RT1">
       <value>100k</value>
+      <footprint>Resistors_SMD:R_0603</footprint>
       <fields>
         <field name="Manufacturer">Murata</field>
         <field name="Manufacturer Part Number">NCP18WF104J03RB</field>
@@ -158,750 +199,832 @@
         <field name="Supplier 1 Part Number">490-2430-1-ND</field>
       </fields>
       <libsource lib="Jason_Custom_Home" part="PTC"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>56BDECF4</tstamp>
+      <sheetpath names="/LED Driver Boost/" tstamps="/5903B0F0/"/>
+      <tstamp>5903D095</tstamp>
     </comp>
-    <comp ref="R8">
-      <value>19.6k</value>
+    <comp ref="R3">
+      <value>18k</value>
+      <footprint>Resistors_SMD:R_0603</footprint>
       <fields>
-        <field name="Manufacturer">Panasonic</field>
-        <field name="Manufacturer Part Number">ERJ-3EKF1962V</field>
-        <field name="Supplier 1">Digikey</field>
-        <field name="Supplier 1 Part Number">P19.6KHCT-ND</field>
+        <field name="Manufacturer">MacroFab</field>
+        <field name="Manufacturer Part Number">MF-RES-0603-18K</field>
       </fields>
       <libsource lib="device" part="R"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>56BDED8D</tstamp>
+      <sheetpath names="/LED Driver Boost/" tstamps="/5903B0F0/"/>
+      <tstamp>5903D0A0</tstamp>
     </comp>
     <comp ref="R6">
-      <value>150k</value>
+      <value>100k</value>
+      <footprint>Resistors_SMD:R_0603</footprint>
       <fields>
-        <field name="Manufacturer">Panasonic</field>
-        <field name="Manufacturer Part Number">ERJ-3EKF1503V</field>
-        <field name="Supplier 1">Digikey</field>
-        <field name="Supplier 1 Part Number">P150KHCT-ND</field>
+        <field name="Manufacturer">MacroFab</field>
+        <field name="Manufacturer Part Number">MF-RES-0603-100K</field>
       </fields>
       <libsource lib="device" part="R"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>56BDFF90</tstamp>
+      <sheetpath names="/LED Driver Boost/" tstamps="/5903B0F0/"/>
+      <tstamp>5903D0B1</tstamp>
     </comp>
-    <comp ref="R7">
-      <value>1M</value>
+    <comp ref="R1">
+      <value>680k</value>
+      <footprint>Resistors_SMD:R_0603</footprint>
       <fields>
-        <field name="Manufacturer">Panasonic</field>
-        <field name="Manufacturer Part Number">ERJ-3EKF1004V</field>
-        <field name="Supplier 1">Digikey</field>
-        <field name="Supplier 1 Part Number">P1.00MHCT-ND</field>
+        <field name="Manufacturer">MacroFab</field>
+        <field name="Manufacturer Part Number">MF-RES-0603-680K</field>
       </fields>
       <libsource lib="device" part="R"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>56BE0031</tstamp>
-    </comp>
-    <comp ref="U2">
-      <value>ATSAMD21G</value>
-      <fields>
-        <field name="Manufacturer">Atmel</field>
-        <field name="Manufacturer Part Number">ATSAMD21G16B-AFT</field>
-        <field name="Supplier 1">Digikey</field>
-        <field name="Supplier 1 Part Number">ATSAMD21G16B-AFTCT-ND</field>
-      </fields>
-      <libsource lib="Jason_Custom_Home" part="ATSAMD21G"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>56BE4C0C</tstamp>
-    </comp>
-    <comp ref="C8">
-      <value>22uF</value>
-      <fields>
-        <field name="Manufacturer">Samsung</field>
-        <field name="Manufacturer Part Number">CL32B226KAJNFNE</field>
-        <field name="Supplier 1">Digikey</field>
-        <field name="Supplier 1 Part Number">1276-3391-1-ND</field>
-      </fields>
-      <libsource lib="device" part="C"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>56BFE782</tstamp>
-    </comp>
-    <comp ref="R11">
-      <value>10k</value>
-      <fields>
-        <field name="Manufacturer">Panasonic</field>
-        <field name="Manufacturer Part Number">ERJ-3EKF1002V</field>
-        <field name="Supplier 1">Digikey</field>
-        <field name="Supplier 1 Part Number">P10.0KHCT-ND</field>
-      </fields>
-      <libsource lib="device" part="R"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>56BFFE69</tstamp>
-    </comp>
-    <comp ref="R18">
-      <value>1M</value>
-      <fields>
-        <field name="Manufacturer">Panasonic</field>
-        <field name="Manufacturer Part Number">ERJ-3EKF1004V</field>
-        <field name="Supplier 1">Digikey</field>
-        <field name="Supplier 1 Part Number">P1.00MHCT-ND</field>
-      </fields>
-      <libsource lib="device" part="R"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>56C028C3</tstamp>
-    </comp>
-    <comp ref="D5">
-      <value>LED</value>
-      <fields>
-        <field name="Manufacturer">Cree</field>
-        <field name="Manufacturer Part Number">XMLAWT-00-0000-0000T5051</field>
-        <field name="Supplier 1">Arrow</field>
-        <field name="Supplier 1 Part Number">XMLAWT0000000000T5051**M </field>
-      </fields>
-      <libsource lib="Jason_Custom_Home" part="LED"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>56C128A8</tstamp>
-    </comp>
-    <comp ref="D10">
-      <value>LED</value>
-      <fields>
-        <field name="Manufacturer">Cree</field>
-        <field name="Manufacturer Part Number">XMLAWT-00-0000-0000T5051</field>
-        <field name="Supplier 1">Arrow</field>
-        <field name="Supplier 1 Part Number">XMLAWT0000000000T5051**M </field>
-      </fields>
-      <libsource lib="Jason_Custom_Home" part="LED"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>56C12BE6</tstamp>
-    </comp>
-    <comp ref="D11">
-      <value>LED</value>
-      <fields>
-        <field name="Manufacturer">Cree</field>
-        <field name="Manufacturer Part Number">XMLAWT-00-0000-0000T5051</field>
-        <field name="Supplier 1">Arrow</field>
-        <field name="Supplier 1 Part Number">XMLAWT0000000000T5051**M </field>
-      </fields>
-      <libsource lib="Jason_Custom_Home" part="LED"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>56C12C81</tstamp>
-    </comp>
-    <comp ref="D12">
-      <value>LED</value>
-      <fields>
-        <field name="Manufacturer">Cree</field>
-        <field name="Manufacturer Part Number">XMLAWT-00-0000-0000T5051</field>
-        <field name="Supplier 1">Arrow</field>
-        <field name="Supplier 1 Part Number">XMLAWT0000000000T5051**M </field>
-      </fields>
-      <libsource lib="Jason_Custom_Home" part="LED"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>56C12D05</tstamp>
-    </comp>
-    <comp ref="D13">
-      <value>LED</value>
-      <fields>
-        <field name="Manufacturer">Cree</field>
-        <field name="Manufacturer Part Number">XMLAWT-00-0000-0000T5051</field>
-        <field name="Supplier 1">Arrow</field>
-        <field name="Supplier 1 Part Number">XMLAWT0000000000T5051**M </field>
-      </fields>
-      <libsource lib="Jason_Custom_Home" part="LED"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>56C12D96</tstamp>
-    </comp>
-    <comp ref="D14">
-      <value>LED</value>
-      <fields>
-        <field name="Manufacturer">Cree</field>
-        <field name="Manufacturer Part Number">XMLAWT-00-0000-0000T5051</field>
-        <field name="Supplier 1">Arrow</field>
-        <field name="Supplier 1 Part Number">XMLAWT0000000000T5051**M </field>
-      </fields>
-      <libsource lib="Jason_Custom_Home" part="LED"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>56C12E3C</tstamp>
-    </comp>
-    <comp ref="D9">
-      <value>LED</value>
-      <fields>
-        <field name="Manufacturer">Cree</field>
-        <field name="Manufacturer Part Number">XMLAWT-00-0000-0000T5051</field>
-        <field name="Supplier 1">Arrow</field>
-        <field name="Supplier 1 Part Number">XMLAWT0000000000T5051**M </field>
-      </fields>
-      <libsource lib="Jason_Custom_Home" part="LED"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>56C12EF5</tstamp>
-    </comp>
-    <comp ref="D8">
-      <value>LED</value>
-      <fields>
-        <field name="Manufacturer">Cree</field>
-        <field name="Manufacturer Part Number">XMLAWT-00-0000-0000T5051</field>
-        <field name="Supplier 1">Arrow</field>
-        <field name="Supplier 1 Part Number">XMLAWT0000000000T5051**M </field>
-      </fields>
-      <libsource lib="Jason_Custom_Home" part="LED"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>56C12F91</tstamp>
-    </comp>
-    <comp ref="D7">
-      <value>LED</value>
-      <fields>
-        <field name="Manufacturer">Cree</field>
-        <field name="Manufacturer Part Number">XMLAWT-00-0000-0000T5051</field>
-        <field name="Supplier 1">Arrow</field>
-        <field name="Supplier 1 Part Number">XMLAWT0000000000T5051**M </field>
-      </fields>
-      <libsource lib="Jason_Custom_Home" part="LED"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>56C1309F</tstamp>
-    </comp>
-    <comp ref="D6">
-      <value>LED</value>
-      <fields>
-        <field name="Manufacturer">Cree</field>
-        <field name="Manufacturer Part Number">XMLAWT-00-0000-0000T5051</field>
-        <field name="Supplier 1">Arrow</field>
-        <field name="Supplier 1 Part Number">XMLAWT0000000000T5051**M </field>
-      </fields>
-      <libsource lib="Jason_Custom_Home" part="LED"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>56C1314D</tstamp>
-    </comp>
-    <comp ref="R17">
-      <value>33mR</value>
-      <fields>
-        <field name="Manufacturer">Panasonic</field>
-        <field name="Manufacturer Part Number">ERJ-3BWFR033V</field>
-        <field name="Supplier 1">Digikey</field>
-        <field name="Supplier 1 Part Number">P17467CT-ND</field>
-      </fields>
-      <libsource lib="device" part="R"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>56C13B26</tstamp>
-    </comp>
-    <comp ref="C16">
-      <value>22uF</value>
-      <fields>
-        <field name="Manufacturer">Samsung</field>
-        <field name="Manufacturer Part Number">CL32B226KAJNFNE</field>
-        <field name="Supplier 1">Digikey</field>
-        <field name="Supplier 1 Part Number">1276-3391-1-ND</field>
-      </fields>
-      <libsource lib="device" part="C"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>56C15359</tstamp>
-    </comp>
-    <comp ref="R19">
-      <value>28.7k</value>
-      <fields>
-        <field name="Manufacturer">Panasonic</field>
-        <field name="Manufacturer Part Number">ERJ-3EKF2872V</field>
-        <field name="Supplier 1">Digikey</field>
-        <field name="Supplier 1 Part Number">P28.7KHCT-ND</field>
-      </fields>
-      <libsource lib="device" part="R"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>56C16A1F</tstamp>
-    </comp>
-    <comp ref="Q2">
-      <value>DMT6016</value>
-      <fields>
-        <field name="Manufacturer">Diodes Inc</field>
-        <field name="Manufacturer Part Number">DMT6016LPS-13</field>
-        <field name="Supplier 1">Digikey</field>
-        <field name="Supplier 1 Part Number">DMT6016LPS-13DICT-ND</field>
-      </fields>
-      <libsource lib="device" part="Q_NMOS_DGS"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>56C195EA</tstamp>
-    </comp>
-    <comp ref="J6">
-      <value>JST RCY</value>
-      <fields>
-        <field name="DNP">DNP</field>
-      </fields>
-      <libsource lib="conn" part="CONN_01X02"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>56C20EBF</tstamp>
-    </comp>
-    <comp ref="J7">
-      <value>SAFETY</value>
-      <fields>
-        <field name="Manufacturer">Sullins</field>
-        <field name="Manufacturer Part Number">PRPC002SAAN-RC</field>
-        <field name="Supplier 1">Digikey</field>
-        <field name="Supplier 1 Part Number">S1011EC-02-ND</field>
-      </fields>
-      <libsource lib="conn" part="CONN_01X02"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>56C22FF7</tstamp>
-    </comp>
-    <comp ref="J1">
-      <value>SERVO</value>
-      <fields>
-        <field name="Manufacturer">Sullins</field>
-        <field name="Manufacturer Part Number">PRPC003SAAN-RC</field>
-        <field name="Supplier 1">Digikey</field>
-        <field name="Supplier 1 Part Number">S1011EC-03-ND</field>
-      </fields>
-      <libsource lib="conn" part="CONN_01X03"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>56C2FCC9</tstamp>
-    </comp>
-    <comp ref="C2">
-      <value>22uF</value>
-      <fields>
-        <field name="Manufacturer">Samsung</field>
-        <field name="Manufacturer Part Number">CL32B226KAJNFNE</field>
-        <field name="Supplier 1">Digikey</field>
-        <field name="Supplier 1 Part Number">1276-3391-1-ND</field>
-      </fields>
-      <libsource lib="device" part="C"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>56C31055</tstamp>
+      <sheetpath names="/LED Driver Boost/" tstamps="/5903B0F0/"/>
+      <tstamp>5903D0BC</tstamp>
     </comp>
     <comp ref="C3">
-      <value>22uF</value>
+      <value>10uF</value>
+      <footprint>Capacitors_SMD:C_1206</footprint>
       <fields>
         <field name="Manufacturer">Samsung</field>
-        <field name="Manufacturer Part Number">CL32B226KAJNFNE</field>
-        <field name="Supplier 1">Digikey</field>
-        <field name="Supplier 1 Part Number">1276-3391-1-ND</field>
+        <field name="Manufacturer Part Number">CL31A106MBHNNNE</field>
+        <field name="Voltage">50V</field>
+        <field name="DisplayFootprint">1206</field>
+        <field name="TempCo">X5R</field>
       </fields>
       <libsource lib="device" part="C"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>56C31BF7</tstamp>
-    </comp>
-    <comp ref="L1">
-      <value>22uH</value>
-      <fields>
-        <field name="Manufacturer">Eaton</field>
-        <field name="Manufacturer Part Number">DR127-220-R</field>
-        <field name="Supplier 1">Digikey</field>
-        <field name="Supplier 1 Part Number">513-1044-1-ND</field>
-      </fields>
-      <libsource lib="device" part="INDUCTOR"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>56C3F574</tstamp>
-    </comp>
-    <comp ref="C5">
-      <value>0.1uF</value>
-      <fields>
-        <field name="Manufacturer">Yageo</field>
-        <field name="Manufacturer Part Number">CC0603KRX7R7BB104</field>
-        <field name="Supplier 1">Digikey</field>
-        <field name="Supplier 1 Part Number">311-1088-1-ND</field>
-      </fields>
-      <libsource lib="device" part="C"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>56C3F985</tstamp>
-    </comp>
-    <comp ref="C7">
-      <value>10uF</value>
-      <fields>
-        <field name="Manufacturer">Murata</field>
-        <field name="Manufacturer Part Number">GRM21BR71A106KA73L</field>
-        <field name="Supplier 1">Digikey</field>
-        <field name="Supplier 1 Part Number">490-10516-1-ND </field>
-      </fields>
-      <libsource lib="device" part="C"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>56C3FA43</tstamp>
-    </comp>
-    <comp ref="C12">
-      <value>10uF</value>
-      <fields>
-        <field name="Manufacturer">Murata</field>
-        <field name="Manufacturer Part Number">GRM21BR71A106KA73L</field>
-        <field name="Supplier 1">Digikey</field>
-        <field name="Supplier 1 Part Number">490-10516-1-ND </field>
-      </fields>
-      <libsource lib="device" part="C"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>56C41610</tstamp>
-    </comp>
-    <comp ref="C6">
-      <value>0.1uF</value>
-      <fields>
-        <field name="Manufacturer">Yageo</field>
-        <field name="Manufacturer Part Number">CC0603KRX7R7BB104</field>
-        <field name="Supplier 1">Digikey</field>
-        <field name="Supplier 1 Part Number">311-1088-1-ND</field>
-      </fields>
-      <libsource lib="device" part="C"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>56C41DAA</tstamp>
-    </comp>
-    <comp ref="C9">
-      <value>0.1uF</value>
-      <fields>
-        <field name="Manufacturer">Yageo</field>
-        <field name="Manufacturer Part Number">CC0603KRX7R7BB104</field>
-        <field name="Supplier 1">Digikey</field>
-        <field name="Supplier 1 Part Number">311-1088-1-ND</field>
-      </fields>
-      <libsource lib="device" part="C"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>56C41E9D</tstamp>
-    </comp>
-    <comp ref="C10">
-      <value>0.1uF</value>
-      <fields>
-        <field name="Manufacturer">Yageo</field>
-        <field name="Manufacturer Part Number">CC0603KRX7R7BB104</field>
-        <field name="Supplier 1">Digikey</field>
-        <field name="Supplier 1 Part Number">311-1088-1-ND</field>
-      </fields>
-      <libsource lib="device" part="C"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>56C41F71</tstamp>
-    </comp>
-    <comp ref="C4">
-      <value>1uF</value>
-      <fields>
-        <field name="Manufacturer">Samsung</field>
-        <field name="Manufacturer Part Number">CL10A105KP8NNNC</field>
-        <field name="Supplier 1">Digikey</field>
-        <field name="Supplier 1 Part Number">1276-1182-1-ND</field>
-      </fields>
-      <libsource lib="device" part="C"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>56C42802</tstamp>
-    </comp>
-    <comp ref="C13">
-      <value>0.1uF</value>
-      <fields>
-        <field name="Manufacturer">Yageo</field>
-        <field name="Manufacturer Part Number">CC0603KRX7R7BB104</field>
-        <field name="Supplier 1">Digikey</field>
-        <field name="Supplier 1 Part Number">311-1088-1-ND</field>
-      </fields>
-      <libsource lib="device" part="C"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>56C45C0C</tstamp>
+      <sheetpath names="/LED Driver Boost/" tstamps="/5903B0F0/"/>
+      <tstamp>5903D0D4</tstamp>
     </comp>
     <comp ref="R10">
       <value>10k</value>
+      <footprint>Resistors_SMD:R_0603</footprint>
       <fields>
-        <field name="Manufacturer">Panasonic</field>
-        <field name="Manufacturer Part Number">ERJ-3EKF1002V</field>
-        <field name="Supplier 1">Digikey</field>
-        <field name="Supplier 1 Part Number">P10.0KHCT-ND</field>
+        <field name="Manufacturer">MacroFab</field>
+        <field name="Manufacturer Part Number">MF-RES-0603-10K</field>
       </fields>
       <libsource lib="device" part="R"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>56C4652C</tstamp>
+      <sheetpath names="/LED Driver Boost/" tstamps="/5903B0F0/"/>
+      <tstamp>5903D0E5</tstamp>
     </comp>
-    <comp ref="SW1">
-      <value>RESET</value>
+    <comp ref="R2">
+      <value>825k</value>
+      <footprint>Resistors_SMD:R_0603</footprint>
       <fields>
-        <field name="Manufacturer">TE</field>
-        <field name="Manufacturer Part Number">FSM4JSMA</field>
-        <field name="Supplier 1">Digikey</field>
-        <field name="Supplier 1 Part Number">450-1129-ND</field>
-      </fields>
-      <libsource lib="Jason_Custom_Home" part="SW_Tact_NO"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>56C4A6FB</tstamp>
-    </comp>
-    <comp ref="R13">
-      <value>1k</value>
-      <fields>
-        <field name="Manufacturer">Panasonic</field>
-        <field name="Manufacturer Part Number"> ERJ-3EKF1001V</field>
-        <field name="Supplier 1">Digikey</field>
-        <field name="Supplier 1 Part Number">P1.00KHCT-ND</field>
+        <field name="Manufacturer">MacroFab</field>
+        <field name="Manufacturer Part Number">MF-RES-0603-825K</field>
       </fields>
       <libsource lib="device" part="R"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>56C573D5</tstamp>
+      <sheetpath names="/LED Driver Boost/" tstamps="/5903B0F0/"/>
+      <tstamp>5903D0F0</tstamp>
     </comp>
-    <comp ref="R14">
-      <value>1k</value>
+    <comp ref="R4">
+      <value>39mR</value>
+      <footprint>Resistors_SMD:R_0603</footprint>
       <fields>
         <field name="Manufacturer">Panasonic</field>
-        <field name="Manufacturer Part Number"> ERJ-3EKF1001V</field>
-        <field name="Supplier 1">Digikey</field>
-        <field name="Supplier 1 Part Number">P1.00KHCT-ND</field>
+        <field name="Manufacturer Part Number">ERJ-3BWFR039V</field>
       </fields>
       <libsource lib="device" part="R"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>56C57A2F</tstamp>
+      <sheetpath names="/LED Driver Boost/" tstamps="/5903B0F0/"/>
+      <tstamp>5903D0FB</tstamp>
+    </comp>
+    <comp ref="R5">
+      <value>15k</value>
+      <footprint>Resistors_SMD:R_0603</footprint>
+      <fields>
+        <field name="Manufacturer">MacroFab</field>
+        <field name="Manufacturer Part Number">MF-RES-0603-15K</field>
+      </fields>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/LED Driver Boost/" tstamps="/5903B0F0/"/>
+      <tstamp>5903D111</tstamp>
+    </comp>
+    <comp ref="J2">
+      <value>SAFETY</value>
+      <footprint>Socket_Strips:Socket_Strip_Straight_1x02_Pitch2.54mm</footprint>
+      <fields>
+        <field name="Manufacturer">MacroFab</field>
+        <field name="Manufacturer Part Number">MF-CON-2.54mm-01x02</field>
+      </fields>
+      <libsource lib="conn" part="CONN_01X02"/>
+      <sheetpath names="/LED Driver Boost/" tstamps="/5903B0F0/"/>
+      <tstamp>5903D131</tstamp>
+    </comp>
+    <comp ref="J1">
+      <value>CONN_01X04</value>
+      <footprint>Reclaimer_Labs:Header_04x01_2.5mm_RA</footprint>
+      <fields>
+        <field name="Manufacturer">JST</field>
+        <field name="Manufacturer Part Number">S4B-EH(LF)(SN)</field>
+      </fields>
+      <libsource lib="conn" part="CONN_01X04"/>
+      <sheetpath names="/LED Driver Boost/" tstamps="/5903B0F0/"/>
+      <tstamp>5906322F</tstamp>
+    </comp>
+    <comp ref="C2">
+      <value>10uF</value>
+      <footprint>Capacitors_SMD:C_1206</footprint>
+      <fields>
+        <field name="Manufacturer">Samsung</field>
+        <field name="Manufacturer Part Number">CL31A106MBHNNNE</field>
+        <field name="Voltage">50V</field>
+        <field name="DisplayFootprint">1206</field>
+        <field name="TempCo">X5R</field>
+      </fields>
+      <libsource lib="device" part="C"/>
+      <sheetpath names="/LED Driver Boost/" tstamps="/5903B0F0/"/>
+      <tstamp>5906DE3D</tstamp>
+    </comp>
+    <comp ref="C1">
+      <value>10uF</value>
+      <footprint>Capacitors_SMD:C_1206</footprint>
+      <fields>
+        <field name="Manufacturer">Samsung</field>
+        <field name="Manufacturer Part Number">CL31A106MBHNNNE</field>
+        <field name="Voltage">50V</field>
+        <field name="DisplayFootprint">1206</field>
+        <field name="TempCo">X5R</field>
+      </fields>
+      <libsource lib="device" part="C"/>
+      <sheetpath names="/LED Driver Boost/" tstamps="/5903B0F0/"/>
+      <tstamp>5906DEAC</tstamp>
+    </comp>
+    <comp ref="C4">
+      <value>4.7uF</value>
+      <footprint>Capacitors_SMD:C_1206</footprint>
+      <fields>
+        <field name="Manufacturer">Taiyo Yuden</field>
+        <field name="Manufacturer Part Number">HMK325BJ475KM-PE</field>
+        <field name="Voltage">100V</field>
+        <field name="DisplayFootprint">1210</field>
+        <field name="TempCo">X5R</field>
+      </fields>
+      <libsource lib="device" part="C"/>
+      <sheetpath names="/LED Driver Boost/" tstamps="/5903B0F0/"/>
+      <tstamp>5906F89C</tstamp>
+    </comp>
+    <comp ref="C5">
+      <value>4.7uF</value>
+      <footprint>Capacitors_SMD:C_1206</footprint>
+      <fields>
+        <field name="Manufacturer">Taiyo Yuden</field>
+        <field name="Manufacturer Part Number">HMK325BJ475KM-PE</field>
+        <field name="Voltage">100V</field>
+        <field name="DisplayFootprint">1210</field>
+        <field name="TempCo">X5R</field>
+      </fields>
+      <libsource lib="device" part="C"/>
+      <sheetpath names="/LED Driver Boost/" tstamps="/5903B0F0/"/>
+      <tstamp>590706CF</tstamp>
+    </comp>
+    <comp ref="Q2">
+      <value>DMT6016</value>
+      <footprint>Reclaimer_Labs:POWERDI5060-8</footprint>
+      <fields>
+        <field name="Manufacturer">Diodes Inc</field>
+        <field name="Manufacturer Part Number">DMT6016LPS-13</field>
+      </fields>
+      <libsource lib="device" part="Q_NMOS_SGD"/>
+      <sheetpath names="/LED Driver Boost/" tstamps="/5903B0F0/"/>
+      <tstamp>590ACBF4</tstamp>
+    </comp>
+    <comp ref="C29">
+      <value>4.7uF</value>
+      <footprint>Capacitors_SMD:C_0805</footprint>
+      <fields>
+        <field name="Manufacturer">Samsung</field>
+        <field name="Manufacturer Part Number">CL21A475KOFNNNE</field>
+      </fields>
+      <libsource lib="device" part="C"/>
+      <sheetpath names="/LED Driver Boost/" tstamps="/5903B0F0/"/>
+      <tstamp>591062E2</tstamp>
+    </comp>
+    <comp ref="U2">
+      <value>nrf52840</value>
+      <footprint>Reclaimer_Labs:AQFN73</footprint>
+      <fields>
+        <field name="Manufacturer">Nordic</field>
+        <field name="Manufacturer Part Number">NRF52840-QIAA-T</field>
+      </fields>
+      <libsource lib="Jason_Custom_Home" part="nrf52840"/>
+      <sheetpath names="/nrf52840/" tstamps="/5903F159/"/>
+      <tstamp>59078226</tstamp>
+    </comp>
+    <comp ref="J3">
+      <value>ARM_Debug</value>
+      <footprint>Reclaimer_Labs:HEADER_SMT_02x05_1.27MM_POL</footprint>
+      <fields>
+        <field name="Manufacturer">CNC Tech</field>
+        <field name="Manufacturer Part Number">3220-10-0300-00</field>
+      </fields>
+      <libsource lib="conn" part="CONN_02X05"/>
+      <sheetpath names="/nrf52840/" tstamps="/5903F159/"/>
+      <tstamp>5907848D</tstamp>
+    </comp>
+    <comp ref="R11">
+      <value>100k</value>
+      <footprint>Resistors_SMD:R_0603</footprint>
+      <fields>
+        <field name="Manufacturer">MacroFab</field>
+        <field name="Manufacturer Part Number">MF-RES-0603-100K</field>
+      </fields>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/nrf52840/" tstamps="/5903F159/"/>
+      <tstamp>590842BA</tstamp>
+    </comp>
+    <comp ref="Y1">
+      <value>32MHz</value>
+      <footprint>Reclaimer_Labs:Crystal_SMD_2016-4pin_2.0x1.6mm</footprint>
+      <fields>
+        <field name="Manufacturer">Murata</field>
+        <field name="Manufacturer Part Number">XRCGB32M000F2P00R0</field>
+      </fields>
+      <libsource lib="device" part="Crystal_GND24"/>
+      <sheetpath names="/nrf52840/" tstamps="/5903F159/"/>
+      <tstamp>590844EF</tstamp>
+    </comp>
+    <comp ref="C12">
+      <value>8.2pF</value>
+      <footprint>Capacitors_SMD:C_0402</footprint>
+      <fields>
+        <field name="Manufacturer">MacroFab</field>
+        <field name="Manufacturer Part Number">MF-CAP-0402-8.2pF</field>
+      </fields>
+      <libsource lib="device" part="C"/>
+      <sheetpath names="/nrf52840/" tstamps="/5903F159/"/>
+      <tstamp>59084ED8</tstamp>
+    </comp>
+    <comp ref="C13">
+      <value>8.2pF</value>
+      <footprint>Capacitors_SMD:C_0402</footprint>
+      <fields>
+        <field name="Manufacturer">MacroFab</field>
+        <field name="Manufacturer Part Number">MF-CAP-0402-8.2pF</field>
+      </fields>
+      <libsource lib="device" part="C"/>
+      <sheetpath names="/nrf52840/" tstamps="/5903F159/"/>
+      <tstamp>590858B7</tstamp>
+    </comp>
+    <comp ref="C10">
+      <value>0.8pF</value>
+      <footprint>Capacitors_SMD:C_0402</footprint>
+      <fields>
+        <field name="Manufacturer">Murata</field>
+        <field name="Manufacturer Part Number">GRM1555C2AR80BA01D</field>
+      </fields>
+      <libsource lib="device" part="C"/>
+      <sheetpath names="/nrf52840/" tstamps="/5903F159/"/>
+      <tstamp>590861DD</tstamp>
+    </comp>
+    <comp ref="L2">
+      <value>3.3nH</value>
+      <footprint>Capacitors_SMD:C_0402</footprint>
+      <fields>
+        <field name="Manufacturer">TDK</field>
+        <field name="Manufacturer Part Number">MLG1005S3N3BT000</field>
+      </fields>
+      <libsource lib="device" part="L_Small"/>
+      <sheetpath names="/nrf52840/" tstamps="/5903F159/"/>
+      <tstamp>5908621F</tstamp>
+    </comp>
+    <comp ref="C11">
+      <value>0.5pF</value>
+      <footprint>Capacitors_SMD:C_0402</footprint>
+      <fields>
+        <field name="Manufacturer">Murata</field>
+        <field name="Manufacturer Part Number">GRM1555C1HR50BA01D</field>
+      </fields>
+      <libsource lib="device" part="C"/>
+      <sheetpath names="/nrf52840/" tstamps="/5903F159/"/>
+      <tstamp>59086274</tstamp>
+    </comp>
+    <comp ref="D2">
+      <value>1N4148</value>
+      <footprint>Diodes_SMD:D_SOD-123</footprint>
+      <fields>
+        <field name="Manufacturer">MacroFab</field>
+        <field name="Manufacturer Part Number">MF-DIO-SOD123-1N4148</field>
+      </fields>
+      <libsource lib="device" part="D"/>
+      <sheetpath names="/nrf52840/" tstamps="/5903F159/"/>
+      <tstamp>59088893</tstamp>
+    </comp>
+    <comp ref="C15">
+      <value>1uF</value>
+      <footprint>Capacitors_SMD:C_0603</footprint>
+      <fields>
+        <field name="Manufacturer">MacroFab</field>
+        <field name="Manufacturer Part Number">MF-CAP-0603-1uF</field>
+        <field name="Voltage">25V</field>
+        <field name="DisplayFootprint">0603</field>
+        <field name="TempCo">X7R</field>
+      </fields>
+      <libsource lib="device" part="C"/>
+      <sheetpath names="/nrf52840/" tstamps="/5903F159/"/>
+      <tstamp>5908ABC0</tstamp>
+    </comp>
+    <comp ref="U3">
+      <value>AP2204</value>
+      <footprint>Reclaimer_Labs:SOT89-3</footprint>
+      <fields>
+        <field name="Manufacturer">Diodes Inc</field>
+        <field name="Manufacturer Part Number">AP2204R-3.3TRG1</field>
+      </fields>
+      <libsource lib="Jason_Custom_Home" part="AP2204"/>
+      <sheetpath names="/nrf52840/" tstamps="/5903F159/"/>
+      <tstamp>5908DE8D</tstamp>
+    </comp>
+    <comp ref="C16">
+      <value>0.1uF</value>
+      <footprint>Capacitors_SMD:C_0402</footprint>
+      <fields>
+        <field name="Manufacturer">MacroFab</field>
+        <field name="Manufacturer Part Number">MF-CAP-0402-0.1uF</field>
+        <field name="DisplayFootprint">0402</field>
+      </fields>
+      <libsource lib="device" part="C"/>
+      <sheetpath names="/nrf52840/" tstamps="/5903F159/"/>
+      <tstamp>59090367</tstamp>
+    </comp>
+    <comp ref="C20">
+      <value>1uF</value>
+      <footprint>Capacitors_SMD:C_0603</footprint>
+      <fields>
+        <field name="Manufacturer">MacroFab</field>
+        <field name="Manufacturer Part Number">MF-CAP-0603-1uF</field>
+        <field name="DisplayFootprint">0603</field>
+      </fields>
+      <libsource lib="device" part="C"/>
+      <sheetpath names="/nrf52840/" tstamps="/5903F159/"/>
+      <tstamp>59090636</tstamp>
+    </comp>
+    <comp ref="C17">
+      <value>0.1uF</value>
+      <footprint>Capacitors_SMD:C_0402</footprint>
+      <fields>
+        <field name="Manufacturer">MacroFab</field>
+        <field name="Manufacturer Part Number">MF-CAP-0402-0.1uF</field>
+        <field name="DisplayFootprint">0402</field>
+      </fields>
+      <libsource lib="device" part="C"/>
+      <sheetpath names="/nrf52840/" tstamps="/5903F159/"/>
+      <tstamp>590987E1</tstamp>
+    </comp>
+    <comp ref="C18">
+      <value>0.1uF</value>
+      <footprint>Capacitors_SMD:C_0402</footprint>
+      <fields>
+        <field name="Manufacturer">MacroFab</field>
+        <field name="Manufacturer Part Number">MF-CAP-0402-0.1uF</field>
+        <field name="DisplayFootprint">0402</field>
+      </fields>
+      <libsource lib="device" part="C"/>
+      <sheetpath names="/nrf52840/" tstamps="/5903F159/"/>
+      <tstamp>5909884D</tstamp>
+    </comp>
+    <comp ref="C19">
+      <value>0.1uF</value>
+      <footprint>Capacitors_SMD:C_0402</footprint>
+      <fields>
+        <field name="Manufacturer">MacroFab</field>
+        <field name="Manufacturer Part Number">MF-CAP-0402-0.1uF</field>
+        <field name="DisplayFootprint">0402</field>
+      </fields>
+      <libsource lib="device" part="C"/>
+      <sheetpath names="/nrf52840/" tstamps="/5903F159/"/>
+      <tstamp>59098939</tstamp>
+    </comp>
+    <comp ref="C23">
+      <value>0.1uF</value>
+      <footprint>Capacitors_SMD:C_0402</footprint>
+      <fields>
+        <field name="Manufacturer">MacroFab</field>
+        <field name="Manufacturer Part Number">MF-CAP-0402-0.1uF</field>
+        <field name="DisplayFootprint">0402</field>
+      </fields>
+      <libsource lib="device" part="C"/>
+      <sheetpath names="/nrf52840/" tstamps="/5903F159/"/>
+      <tstamp>5909AB3B</tstamp>
+    </comp>
+    <comp ref="C26">
+      <value>100pF</value>
+      <footprint>Capacitors_SMD:C_0402</footprint>
+      <fields>
+        <field name="Manufacturer">Murata</field>
+        <field name="Manufacturer Part Number">GRM1555C1H101JA01D</field>
+        <field name="DisplayFootprint">0402</field>
+      </fields>
+      <libsource lib="device" part="C"/>
+      <sheetpath names="/nrf52840/" tstamps="/5903F159/"/>
+      <tstamp>5909AC84</tstamp>
+    </comp>
+    <comp ref="C27">
+      <value>1uF</value>
+      <footprint>Capacitors_SMD:C_0603</footprint>
+      <fields>
+        <field name="Manufacturer">MacroFab</field>
+        <field name="Manufacturer Part Number">MF-CAP-0603-1uF</field>
+        <field name="DisplayFootprint">0603</field>
+      </fields>
+      <libsource lib="device" part="C"/>
+      <sheetpath names="/nrf52840/" tstamps="/5903F159/"/>
+      <tstamp>5909AEC8</tstamp>
+    </comp>
+    <comp ref="C24">
+      <value>DNP</value>
+      <footprint>Capacitors_SMD:C_0402</footprint>
+      <fields>
+        <field name="Manufacturer">MacroFab</field>
+        <field name="Manufacturer Part Number">MF-CAP-0402-0.1uF</field>
+        <field name="DisplayFootprint">0402</field>
+        <field name="DNP">DNP</field>
+      </fields>
+      <libsource lib="device" part="C"/>
+      <sheetpath names="/nrf52840/" tstamps="/5903F159/"/>
+      <tstamp>5909B22B</tstamp>
+    </comp>
+    <comp ref="C25">
+      <value>DNP</value>
+      <footprint>Capacitors_SMD:C_0402</footprint>
+      <fields>
+        <field name="Manufacturer">MacroFab</field>
+        <field name="Manufacturer Part Number">MF-CAP-0402-0.1uF</field>
+        <field name="DisplayFootprint">0402</field>
+        <field name="DNP">DNP</field>
+      </fields>
+      <libsource lib="device" part="C"/>
+      <sheetpath names="/nrf52840/" tstamps="/5903F159/"/>
+      <tstamp>5909B3DF</tstamp>
+    </comp>
+    <comp ref="A1">
+      <value>Antenna</value>
+      <footprint>Reclaimer_Labs:2450AT18B100E</footprint>
+      <fields>
+        <field name="Manufacturer">Johanson</field>
+        <field name="Manufacturer Part Number">2450AT18B100E</field>
+      </fields>
+      <libsource lib="device" part="Antenna"/>
+      <sheetpath names="/nrf52840/" tstamps="/5903F159/"/>
+      <tstamp>5909CF5A</tstamp>
+    </comp>
+    <comp ref="L3">
+      <value>3.3nH</value>
+      <footprint>Capacitors_SMD:C_0402</footprint>
+      <fields>
+        <field name="Manufacturer">TDK</field>
+        <field name="Manufacturer Part Number">MLG1005S3N3BT000</field>
+      </fields>
+      <libsource lib="device" part="L_Small"/>
+      <sheetpath names="/nrf52840/" tstamps="/5903F159/"/>
+      <tstamp>5909D04D</tstamp>
+    </comp>
+    <comp ref="C9">
+      <value>1.2pF</value>
+      <footprint>Capacitors_SMD:C_0402</footprint>
+      <fields>
+        <field name="Manufacturer">Johanson</field>
+        <field name="Manufacturer Part Number">500R07S1R2BV4T</field>
+      </fields>
+      <libsource lib="device" part="C"/>
+      <sheetpath names="/nrf52840/" tstamps="/5903F159/"/>
+      <tstamp>5909D0E3</tstamp>
+    </comp>
+    <comp ref="L4">
+      <value>2.7nH</value>
+      <footprint>Capacitors_SMD:C_0402</footprint>
+      <fields>
+        <field name="Manufacturer">Johanson</field>
+        <field name="Manufacturer Part Number">L-07C2N7SV6T</field>
+      </fields>
+      <libsource lib="device" part="L_Small"/>
+      <sheetpath names="/nrf52840/" tstamps="/5903F159/"/>
+      <tstamp>5909EF2F</tstamp>
+    </comp>
+    <comp ref="J6">
+      <value>CONN_01X06</value>
+      <footprint>Socket_Strips:Socket_Strip_Straight_1x06_Pitch2.54mm</footprint>
+      <fields>
+        <field name="Manufacturer">MacroFab</field>
+        <field name="Manufacturer Part Number">MF-CON-2.54mm-01x06</field>
+      </fields>
+      <libsource lib="conn" part="CONN_01X06"/>
+      <sheetpath names="/nrf52840/" tstamps="/5903F159/"/>
+      <tstamp>590A911A</tstamp>
+    </comp>
+    <comp ref="C21">
+      <value>4.7uF</value>
+      <footprint>Capacitors_SMD:C_0805</footprint>
+      <fields>
+        <field name="Manufacturer">Samsung</field>
+        <field name="Manufacturer Part Number">CL21A475KOFNNNE</field>
+        <field name="DisplayFootprint">0805</field>
+      </fields>
+      <libsource lib="device" part="C"/>
+      <sheetpath names="/nrf52840/" tstamps="/5903F159/"/>
+      <tstamp>59106E8B</tstamp>
+    </comp>
+    <comp ref="C14">
+      <value>4.7uF</value>
+      <footprint>Capacitors_SMD:C_0805</footprint>
+      <fields>
+        <field name="Manufacturer">Samsung</field>
+        <field name="Manufacturer Part Number">CL21A475KOFNNNE</field>
+        <field name="DisplayFootprint">0805</field>
+      </fields>
+      <libsource lib="device" part="C"/>
+      <sheetpath names="/nrf52840/" tstamps="/5903F159/"/>
+      <tstamp>59107049</tstamp>
+    </comp>
+    <comp ref="C22">
+      <value>4.7uF</value>
+      <footprint>Capacitors_SMD:C_0805</footprint>
+      <fields>
+        <field name="Manufacturer">Samsung</field>
+        <field name="Manufacturer Part Number">CL21A475KOFNNNE</field>
+        <field name="DisplayFootprint">0805</field>
+      </fields>
+      <libsource lib="device" part="C"/>
+      <sheetpath names="/nrf52840/" tstamps="/5903F159/"/>
+      <tstamp>59108786</tstamp>
+    </comp>
+    <comp ref="RT2">
+      <value>100k</value>
+      <footprint>Resistors_SMD:R_0603</footprint>
+      <fields>
+        <field name="Manufacturer">Murata</field>
+        <field name="Manufacturer Part Number">NCP18WF104J03RB</field>
+        <field name="Supplier 1">Digikey</field>
+        <field name="Supplier 1 Part Number">490-2430-1-ND</field>
+      </fields>
+      <libsource lib="Jason_Custom_Home" part="PTC"/>
+      <sheetpath names="/nrf52840/" tstamps="/5903F159/"/>
+      <tstamp>59138BDB</tstamp>
     </comp>
     <comp ref="R15">
-      <value>1k</value>
+      <value>18k</value>
+      <footprint>Resistors_SMD:R_0603</footprint>
       <fields>
-        <field name="Manufacturer">Panasonic</field>
-        <field name="Manufacturer Part Number"> ERJ-3EKF1001V</field>
-        <field name="Supplier 1">Digikey</field>
-        <field name="Supplier 1 Part Number">P1.00KHCT-ND</field>
+        <field name="Manufacturer">MacroFab</field>
+        <field name="Manufacturer Part Number">MF-RES-0603-18K</field>
       </fields>
       <libsource lib="device" part="R"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>56C57AF8</tstamp>
+      <sheetpath names="/nrf52840/" tstamps="/5903F159/"/>
+      <tstamp>59138BE4</tstamp>
+    </comp>
+    <comp ref="R16">
+      <value>750k</value>
+      <footprint>Resistors_SMD:R_0603</footprint>
+      <fields>
+        <field name="Manufacturer">MacroFab</field>
+        <field name="Manufacturer Part Number">MF-RES-0603-750K</field>
+      </fields>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/nrf52840/" tstamps="/5903F159/"/>
+      <tstamp>5913DF27</tstamp>
+    </comp>
+    <comp ref="R17">
+      <value>100k</value>
+      <footprint>Resistors_SMD:R_0603</footprint>
+      <fields>
+        <field name="Manufacturer">MacroFab</field>
+        <field name="Manufacturer Part Number">MF-RES-0603-100K</field>
+      </fields>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/nrf52840/" tstamps="/5903F159/"/>
+      <tstamp>5913DFC9</tstamp>
+    </comp>
+    <comp ref="J7">
+      <value>CONN_02X06</value>
+      <footprint>Socket_Strips:Socket_Strip_Straight_2x06_Pitch2.54mm</footprint>
+      <libsource lib="conn" part="CONN_02X06"/>
+      <sheetpath names="/nrf52840/" tstamps="/5903F159/"/>
+      <tstamp>5914060B</tstamp>
+    </comp>
+    <comp ref="C28">
+      <value>DNP</value>
+      <footprint>Capacitors_SMD:C_0603</footprint>
+      <fields>
+        <field name="Manufacturer">MacroFab</field>
+        <field name="Manufacturer Part Number">MF-CAP-0603-1uF</field>
+        <field name="DisplayFootprint">0603</field>
+        <field name="DNP">DNP</field>
+      </fields>
+      <libsource lib="device" part="C"/>
+      <sheetpath names="/nrf52840/" tstamps="/5903F159/"/>
+      <tstamp>592A7361</tstamp>
+    </comp>
+    <comp ref="J4">
+      <value>XT30</value>
+      <footprint>Reclaimer_Labs:XT30</footprint>
+      <libsource lib="conn" part="CONN_01X02"/>
+      <sheetpath names="/Connectors and Misc/" tstamps="/5903F1D0/"/>
+      <tstamp>5903F367</tstamp>
+    </comp>
+    <comp ref="J5">
+      <value>USB_OTG</value>
+      <footprint>Reclaimer_Labs:USB_Micro-B_10118194-0001LF</footprint>
+      <fields>
+        <field name="Manufacturer">MacroFab</field>
+        <field name="Manufacturer Part Number">MF-CON-MICROUSB-RIGHT</field>
+      </fields>
+      <libsource lib="dronelight-rescue" part="USB_OTG-RESCUE-dronelight"/>
+      <sheetpath names="/Connectors and Misc/" tstamps="/5903F1D0/"/>
+      <tstamp>5903FC1F</tstamp>
+    </comp>
+    <comp ref="X1">
+      <value>MTHOLE</value>
+      <footprint>Reclaimer_Labs:MountingHole_3.5mm_Pad_Via</footprint>
+      <libsource lib="Jason_Custom_Home" part="MTHOLE"/>
+      <sheetpath names="/Connectors and Misc/" tstamps="/5903F1D0/"/>
+      <tstamp>5904000A</tstamp>
     </comp>
     <comp ref="R12">
       <value>1k</value>
+      <footprint>Resistors_SMD:R_0603</footprint>
       <fields>
-        <field name="Manufacturer">Panasonic</field>
-        <field name="Manufacturer Part Number"> ERJ-3EKF1001V</field>
-        <field name="Supplier 1">Digikey</field>
-        <field name="Supplier 1 Part Number">P1.00KHCT-ND</field>
+        <field name="Manufacturer">MacroFab</field>
+        <field name="Manufacturer Part Number">MF-RES-0603-1K</field>
       </fields>
       <libsource lib="device" part="R"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>56C5D8B8</tstamp>
+      <sheetpath names="/Connectors and Misc/" tstamps="/5903F1D0/"/>
+      <tstamp>590A523B</tstamp>
     </comp>
     <comp ref="D3">
-      <value>RGB_LED_Cree_PLCC4</value>
+      <value>RGB LED 3228 SMD PLCC-4</value>
+      <footprint>Reclaimer_Labs:PLCC4</footprint>
       <fields>
-        <field name="Manufacturer">Cree</field>
-        <field name="Manufacturer Part Number">CLMVB-FKA-CFHEHLCBB7A363</field>
-        <field name="Supplier 1">Mouser</field>
-        <field name="Supplier 1 Part Number">941-CLMVBFKACFHEHLCB</field>
+        <field name="Manufacturer">MacroFab</field>
+        <field name="Manufacturer Part Number">MF-LED-3228-RGB</field>
       </fields>
       <libsource lib="Jason_Custom_Home" part="RGB_LED_Cree_PLCC4"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>56C60DC1</tstamp>
+      <sheetpath names="/Connectors and Misc/" tstamps="/5903F1D0/"/>
+      <tstamp>590A524F</tstamp>
     </comp>
-    <comp ref="J2">
-      <value>SERVO</value>
+    <comp ref="R13">
+      <value>1k</value>
+      <footprint>Resistors_SMD:R_0603</footprint>
       <fields>
-        <field name="Manufacturer">Sullins</field>
-        <field name="Manufacturer Part Number">PRPC003SAAN-RC</field>
-        <field name="Supplier 1">Digikey</field>
-        <field name="Supplier 1 Part Number">S1011EC-03-ND</field>
-      </fields>
-      <libsource lib="conn" part="CONN_01X03"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>56C6BDD5</tstamp>
-    </comp>
-    <comp ref="J4">
-      <value>JTAG</value>
-      <fields>
-        <field name="Manufacturer">Sullins</field>
-        <field name="Manufacturer Part Number">SBH11-PBPC-D10-ST-BK</field>
-        <field name="Supplier 1">Digikey</field>
-        <field name="Supplier 1 Part Number">S9172-ND</field>
-      </fields>
-      <libsource lib="conn" part="CONN_02X10"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>56C70EC7</tstamp>
-    </comp>
-    <comp ref="R2">
-      <value>150k</value>
-      <fields>
-        <field name="Manufacturer">Panasonic</field>
-        <field name="Manufacturer Part Number">ERJ-3EKF1503V</field>
-        <field name="Supplier 1">Digikey</field>
-        <field name="Supplier 1 Part Number">P150KHCT-ND</field>
+        <field name="Manufacturer">MacroFab</field>
+        <field name="Manufacturer Part Number">MF-RES-0603-1K</field>
       </fields>
       <libsource lib="device" part="R"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>56C7A9A8</tstamp>
+      <sheetpath names="/Connectors and Misc/" tstamps="/5903F1D0/"/>
+      <tstamp>590A67C1</tstamp>
     </comp>
-    <comp ref="J3">
-      <value>USB_OTG</value>
+    <comp ref="R14">
+      <value>1k</value>
+      <footprint>Resistors_SMD:R_0603</footprint>
       <fields>
-        <field name="Manufacturer">Amphenol</field>
-        <field name="Manufacturer Part Number">10118194-0001LF</field>
-        <field name="Supplier 1">Digikey</field>
-        <field name="Supplier 1 Part Number">609-4618-1-ND</field>
+        <field name="Manufacturer">MacroFab</field>
+        <field name="Manufacturer Part Number">MF-RES-0603-1K</field>
       </fields>
-      <libsource lib="conn" part="USB_OTG"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>56C7CA2D</tstamp>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/Connectors and Misc/" tstamps="/5903F1D0/"/>
+      <tstamp>590A6800</tstamp>
     </comp>
-    <comp ref="C1">
-      <value>0.01uF</value>
+    <comp ref="X2">
+      <value>MTHOLE</value>
+      <footprint>Reclaimer_Labs:MountingHole_3.5mm_Pad_Via</footprint>
+      <libsource lib="Jason_Custom_Home" part="MTHOLE"/>
+      <sheetpath names="/Connectors and Misc/" tstamps="/5903F1D0/"/>
+      <tstamp>590AABE2</tstamp>
+    </comp>
+    <comp ref="X3">
+      <value>MTHOLE</value>
+      <footprint>Reclaimer_Labs:MountingHole_3.5mm_Pad_Via</footprint>
+      <libsource lib="Jason_Custom_Home" part="MTHOLE"/>
+      <sheetpath names="/Connectors and Misc/" tstamps="/5903F1D0/"/>
+      <tstamp>590AAC28</tstamp>
+    </comp>
+    <comp ref="X4">
+      <value>MTHOLE</value>
+      <footprint>Reclaimer_Labs:MountingHole_3.5mm_Pad_Via</footprint>
+      <libsource lib="Jason_Custom_Home" part="MTHOLE"/>
+      <sheetpath names="/Connectors and Misc/" tstamps="/5903F1D0/"/>
+      <tstamp>590AAC81</tstamp>
+    </comp>
+    <comp ref="X5">
+      <value>HEATSINK</value>
+      <footprint>Reclaimer_Labs:573100D00010G</footprint>
       <fields>
-        <field name="Manufacturer">Samsung</field>
-        <field name="Manufacturer Part Number">CL10B103KB8NCNC</field>
-        <field name="Supplier 1">Digikey</field>
-        <field name="Supplier 1 Part Number">1276-1921-1-ND</field>
+        <field name="Manufacturer">Aavid Thermalloy</field>
+        <field name="Manufacturer Part Number">573100D00010G</field>
+      </fields>
+      <libsource lib="Jason_Custom_Home" part="MTHOLE"/>
+      <sheetpath names="/Connectors and Misc/" tstamps="/5903F1D0/"/>
+      <tstamp>591421E6</tstamp>
+    </comp>
+    <comp ref="X6">
+      <value>HEATSINK</value>
+      <footprint>Reclaimer_Labs:573100D00010G</footprint>
+      <fields>
+        <field name="Manufacturer">Aavid Thermalloy</field>
+        <field name="Manufacturer Part Number">573100D00010G</field>
+      </fields>
+      <libsource lib="Jason_Custom_Home" part="MTHOLE"/>
+      <sheetpath names="/Connectors and Misc/" tstamps="/5903F1D0/"/>
+      <tstamp>591424CA</tstamp>
+    </comp>
+    <comp ref="X7">
+      <value>HEATSINK</value>
+      <footprint>Reclaimer_Labs:573100D00010G</footprint>
+      <fields>
+        <field name="Manufacturer">Aavid Thermalloy</field>
+        <field name="Manufacturer Part Number">573100D00010G</field>
+      </fields>
+      <libsource lib="Jason_Custom_Home" part="MTHOLE"/>
+      <sheetpath names="/Connectors and Misc/" tstamps="/5903F1D0/"/>
+      <tstamp>59142688</tstamp>
+    </comp>
+    <comp ref="Q3">
+      <value>Photo_Trans</value>
+      <footprint>Reclaimer_Labs:Photo_Trans_ALS-PT19-315C</footprint>
+      <fields>
+        <field name="Manufacturer">Everlight</field>
+        <field name="Manufacturer Part Number">ALS-PT19-315C/L177/TR8</field>
+      </fields>
+      <libsource lib="Jason_Custom_Home" part="Photo_Trans"/>
+      <sheetpath names="/Sensors/" tstamps="/5923E530/"/>
+      <tstamp>5923E982</tstamp>
+    </comp>
+    <comp ref="R18">
+      <value>10k</value>
+      <footprint>Resistors_SMD:R_0603</footprint>
+      <fields>
+        <field name="Manufacturer">MacroFab</field>
+        <field name="Manufacturer Part Number">MF-RES-0603-10K</field>
+      </fields>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/Sensors/" tstamps="/5923E530/"/>
+      <tstamp>5923E997</tstamp>
+    </comp>
+    <comp ref="U5">
+      <value>LPS22HB</value>
+      <footprint>Reclaimer_Labs:LGA10R50P2X3_200X200X80</footprint>
+      <fields>
+        <field name="Manufacturer">ST</field>
+        <field name="Manufacturer Part Number">LPS22HBTR</field>
+      </fields>
+      <libsource lib="Jason_Custom_Home" part="LPS22HB"/>
+      <sheetpath names="/Sensors/" tstamps="/5923E530/"/>
+      <tstamp>592405ED</tstamp>
+    </comp>
+    <comp ref="C30">
+      <value>0.1uF</value>
+      <footprint>Capacitors_SMD:C_0402</footprint>
+      <fields>
+        <field name="Manufacturer">MacroFab</field>
+        <field name="Manufacturer Part Number">MF-CAP-0402-0.1uF</field>
+        <field name="DisplayFootprint">0402</field>
       </fields>
       <libsource lib="device" part="C"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>56C7ED60</tstamp>
+      <sheetpath names="/Sensors/" tstamps="/5923E530/"/>
+      <tstamp>59240DF4</tstamp>
     </comp>
-    <comp ref="R3">
-      <value>1M</value>
+    <comp ref="U4">
+      <value>SPK0415HM4H-B</value>
+      <footprint>Reclaimer_Labs:SPK0415HM4H-8</footprint>
       <fields>
-        <field name="Manufacturer">Panasonic</field>
-        <field name="Manufacturer Part Number">ERJ-3EKF1004V</field>
-        <field name="Supplier 1">Digikey</field>
-        <field name="Supplier 1 Part Number">P1.00MHCT-ND</field>
+        <field name="Manufacturer">Knowles</field>
+        <field name="Manufacturer Part Number">SPK0415HM4H-B-7</field>
       </fields>
-      <libsource lib="device" part="R"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>56C7F3B4</tstamp>
+      <libsource lib="Jason_Custom_Home" part="SPK0415HM4H-B"/>
+      <sheetpath names="/Sensors/" tstamps="/5923E530/"/>
+      <tstamp>592A4266</tstamp>
     </comp>
-    <comp ref="D1">
-      <value>B550C</value>
+    <comp ref="C31">
+      <value>0.1uF</value>
+      <footprint>Capacitors_SMD:C_0402</footprint>
       <fields>
-        <field name="Manufacturer">Diodes Inc</field>
-        <field name="Manufacturer Part Number">B550C-13-F</field>
-        <field name="Supplier 1">Digikey</field>
-        <field name="Supplier 1 Part Number">B550C-FDICT-ND</field>
+        <field name="Manufacturer">MacroFab</field>
+        <field name="Manufacturer Part Number">MF-CAP-0402-0.1uF</field>
+        <field name="DisplayFootprint">0402</field>
       </fields>
-      <libsource lib="device" part="D_Schottky"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>56C853FB</tstamp>
-    </comp>
-    <comp ref="SW2">
-      <value>RESET</value>
-      <fields>
-        <field name="Manufacturer">TE</field>
-        <field name="Manufacturer Part Number">FSM4JSMA</field>
-        <field name="Supplier 1">Digikey</field>
-        <field name="Supplier 1 Part Number">450-1129-ND</field>
-      </fields>
-      <libsource lib="Jason_Custom_Home" part="SW_Tact_NO"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>56C89510</tstamp>
-    </comp>
-    <comp ref="SW3">
-      <value>RESET</value>
-      <fields>
-        <field name="Manufacturer">TE</field>
-        <field name="Manufacturer Part Number">FSM4JSMA</field>
-        <field name="Supplier 1">Digikey</field>
-        <field name="Supplier 1 Part Number">450-1129-ND</field>
-      </fields>
-      <libsource lib="Jason_Custom_Home" part="SW_Tact_NO"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>56C895D0</tstamp>
-    </comp>
-    <comp ref="SW4">
-      <value>RESET</value>
-      <fields>
-        <field name="Manufacturer">TE</field>
-        <field name="Manufacturer Part Number">FSM4JSMA</field>
-        <field name="Supplier 1">Digikey</field>
-        <field name="Supplier 1 Part Number">450-1129-ND</field>
-      </fields>
-      <libsource lib="Jason_Custom_Home" part="SW_Tact_NO"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>56C89DC1</tstamp>
-    </comp>
-    <comp ref="R4">
-      <value>DNP</value>
-      <fields>
-        <field name="DNP">DNP</field>
-      </fields>
-      <libsource lib="device" part="R"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>56C8D716</tstamp>
-    </comp>
-    <comp ref="R1">
-      <value>1k</value>
-      <fields>
-        <field name="Manufacturer">Panasonic</field>
-        <field name="Manufacturer Part Number"> ERJ-3EKF1001V</field>
-        <field name="Supplier 1">Digikey</field>
-        <field name="Supplier 1 Part Number">P1.00KHCT-ND</field>
-      </fields>
-      <libsource lib="device" part="R"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>56CA2E64</tstamp>
-    </comp>
-    <comp ref="J8">
-      <value>CONN_01X08</value>
-      <fields>
-        <field name="DNP">DNP</field>
-      </fields>
-      <libsource lib="conn" part="CONN_01X08"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>56CC67B2</tstamp>
-    </comp>
-    <comp ref="D2">
-      <value>B550C</value>
-      <fields>
-        <field name="Manufacturer">Diodes Inc</field>
-        <field name="Manufacturer Part Number">B550C-13-F</field>
-        <field name="Supplier 1">Digikey</field>
-        <field name="Supplier 1 Part Number">B550C-FDICT-ND</field>
-      </fields>
-      <libsource lib="device" part="D_Schottky"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>56CCD9BC</tstamp>
-    </comp>
-    <comp ref="U3">
-      <value>NCP5501</value>
-      <fields>
-        <field name="Manufacturer">ON Semi</field>
-        <field name="Manufacturer Part Number">NCP5501DT33RKG</field>
-        <field name="Supplier 1">Digikey</field>
-        <field name="Supplier 1 Part Number">NCP5501DT33RKGOSCT-ND</field>
-      </fields>
-      <libsource lib="Jason_Custom_Home" part="NCP5501"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>56CD1A14</tstamp>
+      <libsource lib="device" part="C"/>
+      <sheetpath names="/Sensors/" tstamps="/5923E530/"/>
+      <tstamp>592A42A8</tstamp>
     </comp>
   </components>
   <libparts>
-    <libpart lib="Jason_Custom_Home" part="ATSAMD21G">
+    <libpart lib="Jason_Custom_Home" part="AP2204">
       <fields>
         <field name="Reference">U</field>
-        <field name="Value">ATSAMD21G</field>
+        <field name="Value">AP2204</field>
       </fields>
       <pins>
-        <pin num="1" name="PA00" type="3state"/>
-        <pin num="2" name="PA01" type="3state"/>
-        <pin num="3" name="PA02" type="3state"/>
-        <pin num="4" name="PA03" type="3state"/>
-        <pin num="5" name="GNDANA" type="power_in"/>
-        <pin num="6" name="VDDANA" type="power_in"/>
-        <pin num="7" name="PB08" type="3state"/>
-        <pin num="8" name="PB09" type="3state"/>
-        <pin num="9" name="PA04" type="3state"/>
-        <pin num="10" name="PA05" type="3state"/>
-        <pin num="11" name="PA06" type="3state"/>
-        <pin num="12" name="PA07" type="3state"/>
-        <pin num="13" name="PA08" type="3state"/>
-        <pin num="14" name="PA09" type="3state"/>
-        <pin num="15" name="PA10" type="3state"/>
-        <pin num="16" name="PA11" type="3state"/>
-        <pin num="17" name="VDDIO" type="power_in"/>
-        <pin num="18" name="GND" type="power_in"/>
-        <pin num="19" name="PB10" type="3state"/>
-        <pin num="20" name="PB11" type="3state"/>
-        <pin num="21" name="PA12" type="3state"/>
-        <pin num="22" name="PA13" type="3state"/>
-        <pin num="23" name="PA14" type="3state"/>
-        <pin num="24" name="PA15" type="3state"/>
-        <pin num="25" name="PA16" type="3state"/>
-        <pin num="26" name="PA17" type="3state"/>
-        <pin num="27" name="PA18" type="3state"/>
-        <pin num="28" name="PA19" type="3state"/>
-        <pin num="29" name="PA20" type="3state"/>
-        <pin num="30" name="PA21" type="3state"/>
-        <pin num="31" name="PA22" type="3state"/>
-        <pin num="32" name="PA23" type="3state"/>
-        <pin num="33" name="PA24" type="3state"/>
-        <pin num="34" name="PA25" type="3state"/>
-        <pin num="35" name="GND" type="power_in"/>
-        <pin num="36" name="VDDIO" type="power_in"/>
-        <pin num="37" name="PB22" type="3state"/>
-        <pin num="38" name="PB23" type="3state"/>
-        <pin num="39" name="PA27" type="3state"/>
-        <pin num="40" name="~RESET" type="input"/>
-        <pin num="41" name="PA28" type="3state"/>
-        <pin num="42" name="GND" type="power_in"/>
-        <pin num="43" name="VDDCORE" type="input"/>
-        <pin num="44" name="VDDIN" type="input"/>
-        <pin num="45" name="PA30" type="3state"/>
-        <pin num="46" name="PA31" type="3state"/>
-        <pin num="47" name="PB02" type="3state"/>
-        <pin num="48" name="PB03" type="3state"/>
+        <pin num="1" name="VIN" type="power_in"/>
+        <pin num="2" name="GND" type="passive"/>
+        <pin num="3" name="VOUT" type="power_out"/>
+      </pins>
+    </libpart>
+    <libpart lib="device" part="Antenna">
+      <description>Antenna symbol</description>
+      <fields>
+        <field name="Reference">AE</field>
+        <field name="Value">Antenna</field>
+      </fields>
+      <pins>
+        <pin num="1" name="A" type="input"/>
       </pins>
     </libpart>
     <libpart lib="device" part="C">
       <description>Unpolarized capacitor</description>
       <footprints>
-        <fp>C?</fp>
-        <fp>C_????_*</fp>
-        <fp>C_????</fp>
-        <fp>SMD*_c</fp>
-        <fp>Capacitor*</fp>
+        <fp>C_*</fp>
       </footprints>
       <fields>
         <field name="Reference">C</field>
@@ -913,15 +1036,15 @@
       </pins>
     </libpart>
     <libpart lib="conn" part="CONN_01X02">
-      <description>Connector 01x02</description>
+      <description>Connector, single row, 01x02, pin header</description>
       <footprints>
-        <fp>Pin_Header_Straight_1X02</fp>
-        <fp>Pin_Header_Angled_1X02</fp>
-        <fp>Socket_Strip_Straight_1X02</fp>
-        <fp>Socket_Strip_Angled_1X02</fp>
+        <fp>Pin_Header_Straight_1X*</fp>
+        <fp>Pin_Header_Angled_1X*</fp>
+        <fp>Socket_Strip_Straight_1X*</fp>
+        <fp>Socket_Strip_Angled_1X*</fp>
       </footprints>
       <fields>
-        <field name="Reference">P</field>
+        <field name="Reference">J</field>
         <field name="Value">CONN_01X02</field>
       </fields>
       <pins>
@@ -929,35 +1052,58 @@
         <pin num="2" name="P2" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="conn" part="CONN_01X03">
-      <description>Connector 01x03</description>
+    <libpart lib="conn" part="CONN_01X04">
+      <description>Connector, single row, 01x04, pin header</description>
       <footprints>
-        <fp>Pin_Header_Straight_1X03</fp>
-        <fp>Pin_Header_Angled_1X03</fp>
-        <fp>Socket_Strip_Straight_1X03</fp>
-        <fp>Socket_Strip_Angled_1X03</fp>
+        <fp>Pin_Header_Straight_1X*</fp>
+        <fp>Pin_Header_Angled_1X*</fp>
+        <fp>Socket_Strip_Straight_1X*</fp>
+        <fp>Socket_Strip_Angled_1X*</fp>
       </footprints>
       <fields>
-        <field name="Reference">P</field>
-        <field name="Value">CONN_01X03</field>
+        <field name="Reference">J</field>
+        <field name="Value">CONN_01X04</field>
       </fields>
       <pins>
         <pin num="1" name="P1" type="passive"/>
         <pin num="2" name="P2" type="passive"/>
         <pin num="3" name="P3" type="passive"/>
+        <pin num="4" name="P4" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="conn" part="CONN_01X08">
-      <description>Connector 01x08</description>
+    <libpart lib="conn" part="CONN_01X06">
+      <description>Connector, single row, 01x06, pin header</description>
       <footprints>
-        <fp>Pin_Header_Straight_1X08</fp>
-        <fp>Pin_Header_Angled_1X08</fp>
-        <fp>Socket_Strip_Straight_1X08</fp>
-        <fp>Socket_Strip_Angled_1X08</fp>
+        <fp>Pin_Header_Straight_1X*</fp>
+        <fp>Pin_Header_Angled_1X*</fp>
+        <fp>Socket_Strip_Straight_1X*</fp>
+        <fp>Socket_Strip_Angled_1X*</fp>
       </footprints>
       <fields>
-        <field name="Reference">P</field>
-        <field name="Value">CONN_01X08</field>
+        <field name="Reference">J</field>
+        <field name="Value">CONN_01X06</field>
+      </fields>
+      <pins>
+        <pin num="1" name="P1" type="passive"/>
+        <pin num="2" name="P2" type="passive"/>
+        <pin num="3" name="P3" type="passive"/>
+        <pin num="4" name="P4" type="passive"/>
+        <pin num="5" name="P5" type="passive"/>
+        <pin num="6" name="P6" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="conn" part="CONN_02X05">
+      <description>Connector, double row, 02x05, pin header</description>
+      <footprints>
+        <fp>Pin_Header_Straight_2X*</fp>
+        <fp>Pin_Header_Angled_2X*</fp>
+        <fp>Socket_Strip_Straight_2X*</fp>
+        <fp>Socket_Strip_Angled_2X*</fp>
+        <fp>IDC_Header_Straight_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">CONN_02X05</field>
       </fields>
       <pins>
         <pin num="1" name="P1" type="passive"/>
@@ -968,19 +1114,22 @@
         <pin num="6" name="P6" type="passive"/>
         <pin num="7" name="P7" type="passive"/>
         <pin num="8" name="P8" type="passive"/>
+        <pin num="9" name="P9" type="passive"/>
+        <pin num="10" name="P10" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="conn" part="CONN_02X10">
-      <description>Connector 02x10</description>
+    <libpart lib="conn" part="CONN_02X06">
+      <description>Connector, double row, 02x06, pin header</description>
       <footprints>
-        <fp>Pin_Header_Straight_2X10</fp>
-        <fp>Pin_Header_Angled_2X10</fp>
-        <fp>Socket_Strip_Straight_2X10</fp>
-        <fp>Socket_Strip_Angled_2X10</fp>
+        <fp>Pin_Header_Straight_2X*</fp>
+        <fp>Pin_Header_Angled_2X*</fp>
+        <fp>Socket_Strip_Straight_2X*</fp>
+        <fp>Socket_Strip_Angled_2X*</fp>
+        <fp>IDC_Header_Straight_*</fp>
       </footprints>
       <fields>
-        <field name="Reference">P</field>
-        <field name="Value">CONN_02X10</field>
+        <field name="Reference">J</field>
+        <field name="Value">CONN_02X06</field>
       </fields>
       <pins>
         <pin num="1" name="P1" type="passive"/>
@@ -995,24 +1144,50 @@
         <pin num="10" name="P10" type="passive"/>
         <pin num="11" name="P11" type="passive"/>
         <pin num="12" name="P12" type="passive"/>
-        <pin num="13" name="P13" type="passive"/>
-        <pin num="14" name="P14" type="passive"/>
-        <pin num="15" name="P15" type="passive"/>
-        <pin num="16" name="P16" type="passive"/>
-        <pin num="17" name="P17" type="passive"/>
-        <pin num="18" name="P18" type="passive"/>
-        <pin num="19" name="P19" type="passive"/>
-        <pin num="20" name="P20" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="device" part="Crystal_GND24">
+      <description>Four pin crystal (GND on pins 2 and 4), e.g. in SMD package</description>
+      <footprints>
+        <fp>Crystal*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">Y</field>
+        <field name="Value">Crystal_GND24</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+        <pin num="4" name="4" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="device" part="D">
+      <description>Diode</description>
+      <footprints>
+        <fp>TO-???*</fp>
+        <fp>*SingleDiode</fp>
+        <fp>*_Diode_*</fp>
+        <fp>*SingleDiode*</fp>
+        <fp>D_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">D</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
       </pins>
     </libpart>
     <libpart lib="device" part="D_Schottky">
-      <description>Diode schottky</description>
+      <description>Schottky diode</description>
       <footprints>
-        <fp>D-Pak_TO252AA</fp>
-        <fp>Diode_*</fp>
+        <fp>TO-???*</fp>
         <fp>*SingleDiode</fp>
-        <fp>*SingleDiode*</fp>
         <fp>*_Diode_*</fp>
+        <fp>*SingleDiode*</fp>
+        <fp>D_*</fp>
       </footprints>
       <fields>
         <field name="Reference">D</field>
@@ -1023,7 +1198,7 @@
         <pin num="2" name="A" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="device" part="INDUCTOR">
+    <libpart lib="dronelight-cache" part="INDUCTOR">
       <fields>
         <field name="Reference">L</field>
         <field name="Value">INDUCTOR</field>
@@ -1033,23 +1208,22 @@
         <pin num="2" name="2" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="Jason_Custom_Home" part="LED">
-      <footprints>
-        <fp>LED-3MM</fp>
-        <fp>LED-5MM</fp>
-        <fp>LED-10MM</fp>
-        <fp>LED-0603</fp>
-        <fp>LED-0805</fp>
-        <fp>LED-1206</fp>
-        <fp>LEDV</fp>
-      </footprints>
+    <libpart lib="Jason_Custom_Home" part="LPS22HB">
       <fields>
-        <field name="Reference">D</field>
-        <field name="Value">LED</field>
+        <field name="Reference">U</field>
+        <field name="Value">LPS22HB</field>
       </fields>
       <pins>
-        <pin num="1" name="A" type="passive"/>
-        <pin num="2" name="K" type="passive"/>
+        <pin num="1" name="VDDIO" type="power_in"/>
+        <pin num="2" name="SCL/SPC" type="input"/>
+        <pin num="3" name="RES" type="input"/>
+        <pin num="4" name="SDA/SDI" type="BiDi"/>
+        <pin num="5" name="SA0/SDO" type="BiDi"/>
+        <pin num="6" name="CS" type="input"/>
+        <pin num="7" name="INT_DRDY" type="openCol"/>
+        <pin num="8" name="GND" type="passive"/>
+        <pin num="9" name="GND" type="passive"/>
+        <pin num="10" name="VDD" type="power_in"/>
       </pins>
     </libpart>
     <libpart lib="Jason_Custom_Home" part="LT3755-2-MSE">
@@ -1077,22 +1251,30 @@
         <pin num="17" name="GND" type="power_in"/>
       </pins>
     </libpart>
-    <libpart lib="Jason_Custom_Home" part="NCP5501">
-      <aliases>
-        <alias>LM7805</alias>
-        <alias>LM7812</alias>
-        <alias>78L05</alias>
-      </aliases>
-      <description>Linear Regulator +5V</description>
-      <docs>regulator\lm78xx.pdf</docs>
+    <libpart lib="device" part="L_Small">
+      <description>Inductor, small symbol</description>
+      <footprints>
+        <fp>Choke_*</fp>
+        <fp>*Coil*</fp>
+        <fp>Inductor_*</fp>
+        <fp>L_*</fp>
+      </footprints>
       <fields>
-        <field name="Reference">U</field>
-        <field name="Value">NCP5501</field>
+        <field name="Reference">L</field>
+        <field name="Value">L_Small</field>
       </fields>
       <pins>
-        <pin num="1" name="VI" type="input"/>
-        <pin num="3" name="VO" type="power_out"/>
-        <pin num="4" name="GND" type="input"/>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Jason_Custom_Home" part="MTHOLE">
+      <fields>
+        <field name="Reference">X</field>
+        <field name="Value">MTHOLE</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="input"/>
       </pins>
     </libpart>
     <libpart lib="Jason_Custom_Home" part="PTC">
@@ -1111,23 +1293,33 @@
         <pin num="2" name="~" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="device" part="Q_NMOS_DGS">
-      <description>Transistor N-MOSFET (general)</description>
+    <libpart lib="Jason_Custom_Home" part="Photo_Trans">
       <fields>
         <field name="Reference">Q</field>
-        <field name="Value">Q_NMOS_DGS</field>
+        <field name="Value">Photo_Trans</field>
       </fields>
       <pins>
-        <pin num="1" name="D" type="passive"/>
+        <pin num="C" name="~" type="input"/>
+        <pin num="E" name="~" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="device" part="Q_NMOS_SGD">
+      <description>Transistor N-MOSFETwith substrate diode (general)</description>
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">Q_NMOS_SGD</field>
+      </fields>
+      <pins>
+        <pin num="1" name="S" type="passive"/>
         <pin num="2" name="G" type="input"/>
-        <pin num="3" name="S" type="passive"/>
+        <pin num="3" name="D" type="passive"/>
       </pins>
     </libpart>
     <libpart lib="device" part="R">
       <description>Resistor</description>
       <footprints>
         <fp>R_*</fp>
-        <fp>Resistor_*</fp>
+        <fp>R_*</fp>
       </footprints>
       <fields>
         <field name="Reference">R</field>
@@ -1151,24 +1343,26 @@
         <pin num="4" name="R" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="Jason_Custom_Home" part="SW_Tact_NO">
+    <libpart lib="Jason_Custom_Home" part="SPK0415HM4H-B">
       <fields>
-        <field name="Reference">SW</field>
-        <field name="Value">SW_Tact_NO</field>
+        <field name="Reference">U</field>
+        <field name="Value">SPK0415HM4H-B</field>
       </fields>
       <pins>
-        <pin num="1" name="~" type="passive"/>
-        <pin num="2" name="~" type="passive"/>
+        <pin num="1" name="VDD" type="power_in"/>
+        <pin num="2" name="SELECT" type="input"/>
+        <pin num="3" name="CLOCK" type="input"/>
+        <pin num="4" name="DATA" type="output"/>
+        <pin num="5" name="GROUND" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="conn" part="USB_OTG">
-      <description>micro/mini connector</description>
+    <libpart lib="dronelight-rescue" part="USB_OTG-RESCUE-dronelight">
       <footprints>
         <fp>USB*</fp>
       </footprints>
       <fields>
         <field name="Reference">P</field>
-        <field name="Value">USB_OTG</field>
+        <field name="Value">USB_OTG-RESCUE-dronelight</field>
       </fields>
       <pins>
         <pin num="1" name="VCC" type="power_out"/>
@@ -1179,8 +1373,93 @@
         <pin num="6" name="shield" type="passive"/>
       </pins>
     </libpart>
+    <libpart lib="Jason_Custom_Home" part="nrf52840">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">nrf52840</field>
+      </fields>
+      <pins>
+        <pin num="A8" name="P0.31/AIN7" type="3state"/>
+        <pin num="A10" name="P0.29/AIN5" type="3state"/>
+        <pin num="A12" name="P0.02/AIN0" type="3state"/>
+        <pin num="A14" name="P1.15" type="3state"/>
+        <pin num="A16" name="P1.13" type="3state"/>
+        <pin num="A18" name="DEC2" type="power_out"/>
+        <pin num="A20" name="P1.10" type="3state"/>
+        <pin num="A22" name="VDD" type="power_in"/>
+        <pin num="A23" name="XC2" type="3state"/>
+        <pin num="AA24" name="SWDCLK" type="3state"/>
+        <pin num="AB2" name="DCCH" type="power_out"/>
+        <pin num="AC5" name="DECUSB" type="power_out"/>
+        <pin num="AC9" name="P0.14" type="3state"/>
+        <pin num="AC11" name="P0.16" type="3state"/>
+        <pin num="AC13" name="P0.18/nRESET" type="3state"/>
+        <pin num="AC15" name="P0.19" type="3state"/>
+        <pin num="AC17" name="P0.21" type="3state"/>
+        <pin num="AC19" name="P0.23" type="3state"/>
+        <pin num="AC21" name="P0.25" type="3state"/>
+        <pin num="AC24" name="SWDIO" type="3state"/>
+        <pin num="AD2" name="VBUS" type="power_in"/>
+        <pin num="AD4" name="D-" type="BiDi"/>
+        <pin num="AD6" name="D+" type="BiDi"/>
+        <pin num="AD8" name="P0.13" type="3state"/>
+        <pin num="AD10" name="P0.15" type="3state"/>
+        <pin num="AD12" name="P0.17" type="3state"/>
+        <pin num="AD14" name="VDD" type="power_in"/>
+        <pin num="AD16" name="P0.20" type="3state"/>
+        <pin num="AD18" name="P0.22" type="3state"/>
+        <pin num="AD20" name="P0.24" type="3state"/>
+        <pin num="AD22" name="P1.00" type="3state"/>
+        <pin num="AD23" name="VDD" type="power_in"/>
+        <pin num="B1" name="VDD" type="power_in"/>
+        <pin num="B3" name="DCC" type="power_out"/>
+        <pin num="B5" name="DEC4" type="power_out"/>
+        <pin num="B7" name="VSS" type="passive"/>
+        <pin num="B9" name="P0.30/AIN6" type="3state"/>
+        <pin num="B11" name="P0.28/AIN4" type="3state"/>
+        <pin num="B13" name="P0.03/AIN1" type="3state"/>
+        <pin num="B15" name="P1.14" type="3state"/>
+        <pin num="B17" name="P1.12" type="3state"/>
+        <pin num="B19" name="P1.11" type="3state"/>
+        <pin num="B24" name="XC1" type="passive"/>
+        <pin num="C1" name="DEC1" type="power_out"/>
+        <pin num="D2" name="P0.00/XL1" type="3state"/>
+        <pin num="D23" name="DEC3" type="power_out"/>
+        <pin num="E24" name="DEC2" type="power_out"/>
+        <pin num="F2" name="P0.01/XL2" type="3state"/>
+        <pin num="F23" name="VSS_PA" type="passive"/>
+        <pin num="G1" name="P0.26" type="3state"/>
+        <pin num="H2" name="P0.27" type="3state"/>
+        <pin num="H23" name="ANT" type="passive"/>
+        <pin num="J1" name="P0.04/AIN2" type="3state"/>
+        <pin num="J24" name="P0.10/NFC2" type="3state"/>
+        <pin num="K2" name="P0.05/AIN3" type="3state"/>
+        <pin num="L1" name="P0.06" type="3state"/>
+        <pin num="L24" name="P0.09/NFC1" type="3state"/>
+        <pin num="M2" name="P0.07" type="3state"/>
+        <pin num="N1" name="P0.08" type="3state"/>
+        <pin num="N24" name="DEC5" type="power_out"/>
+        <pin num="P2" name="P1.08" type="3state"/>
+        <pin num="P23" name="P1.07" type="3state"/>
+        <pin num="PAD" name="VSS" type="passive"/>
+        <pin num="R1" name="P1.09" type="3state"/>
+        <pin num="R24" name="P1.06" type="3state"/>
+        <pin num="T2" name="P0.11" type="3state"/>
+        <pin num="T23" name="P1.05" type="3state"/>
+        <pin num="U1" name="P0.12" type="3state"/>
+        <pin num="U24" name="P1.04" type="3state"/>
+        <pin num="V23" name="P1.03" type="3state"/>
+        <pin num="W1" name="VDD" type="power_in"/>
+        <pin num="W24" name="P1.02" type="3state"/>
+        <pin num="Y2" name="VDDH" type="power_in"/>
+        <pin num="Y23" name="P1.01" type="3state"/>
+      </pins>
+    </libpart>
   </libparts>
   <libraries>
+    <library logical="dronelight-rescue">
+      <uri>D:\Projects\DroneLight\electrical\dronelight-rescue.lib</uri>
+    </library>
     <library logical="Jason_Custom_Home">
       <uri>D:\Projects\Libraries\Jason_Custom_Home.lib</uri>
     </library>
@@ -1190,409 +1469,489 @@
     <library logical="conn">
       <uri>C:\Program Files\KiCad\share\kicad\library\conn.lib</uri>
     </library>
+    <library logical="dronelight-cache">
+      <uri>D:\Projects\DroneLight\electrical\dronelight-cache.lib</uri>
+    </library>
   </libraries>
   <nets>
-    <net code="1" name="Net-(R18-Pad1)">
+    <net code="1" name="OPENLED_L">
+      <node ref="R7" pin="2"/>
+      <node ref="U2" pin="R1"/>
+      <node ref="U1" pin="9"/>
+    </net>
+    <net code="2" name="/LED Driver Boost/VREF">
+      <node ref="R3" pin="1"/>
+      <node ref="U1" pin="7"/>
+    </net>
+    <net code="3" name="GND">
+      <node ref="C3" pin="2"/>
+      <node ref="J2" pin="2"/>
+      <node ref="R6" pin="1"/>
+      <node ref="C20" pin="2"/>
+      <node ref="U3" pin="2"/>
+      <node ref="R5" pin="2"/>
+      <node ref="C16" pin="2"/>
+      <node ref="C12" pin="2"/>
+      <node ref="U1" pin="17"/>
+      <node ref="C15" pin="2"/>
+      <node ref="C10" pin="2"/>
+      <node ref="C13" pin="2"/>
+      <node ref="Y1" pin="4"/>
+      <node ref="J6" pin="1"/>
+      <node ref="C23" pin="2"/>
+      <node ref="C24" pin="2"/>
+      <node ref="C27" pin="2"/>
+      <node ref="C26" pin="2"/>
+      <node ref="C19" pin="2"/>
+      <node ref="C17" pin="2"/>
+      <node ref="C28" pin="2"/>
+      <node ref="R17" pin="1"/>
+      <node ref="C18" pin="2"/>
+      <node ref="C25" pin="2"/>
+      <node ref="Y1" pin="2"/>
+      <node ref="L4" pin="2"/>
+      <node ref="J3" pin="9"/>
+      <node ref="J3" pin="5"/>
+      <node ref="J3" pin="3"/>
+      <node ref="U2" pin="B7"/>
+      <node ref="C11" pin="2"/>
+      <node ref="U2" pin="PAD"/>
+      <node ref="U2" pin="F23"/>
+      <node ref="RT2" pin="2"/>
+      <node ref="C22" pin="2"/>
+      <node ref="C14" pin="2"/>
+      <node ref="C21" pin="2"/>
+      <node ref="J7" pin="12"/>
+      <node ref="J1" pin="3"/>
+      <node ref="U4" pin="5"/>
+      <node ref="X1" pin="1"/>
+      <node ref="Q2" pin="1"/>
+      <node ref="C29" pin="1"/>
+      <node ref="C1" pin="2"/>
+      <node ref="J4" pin="2"/>
+      <node ref="J5" pin="5"/>
+      <node ref="J5" pin="6"/>
+      <node ref="C30" pin="2"/>
       <node ref="R18" pin="1"/>
-      <node ref="U1" pin="2"/>
-      <node ref="R19" pin="1"/>
+      <node ref="U5" pin="3"/>
+      <node ref="C4" pin="2"/>
+      <node ref="C31" pin="2"/>
+      <node ref="X7" pin="1"/>
+      <node ref="C7" pin="2"/>
+      <node ref="C8" pin="2"/>
+      <node ref="R9" pin="2"/>
+      <node ref="C6" pin="2"/>
+      <node ref="RT1" pin="2"/>
+      <node ref="X2" pin="1"/>
+      <node ref="X3" pin="1"/>
+      <node ref="U5" pin="9"/>
+      <node ref="X4" pin="1"/>
+      <node ref="U5" pin="8"/>
+      <node ref="X6" pin="1"/>
+      <node ref="C2" pin="2"/>
+      <node ref="C5" pin="2"/>
+      <node ref="R8" pin="2"/>
+      <node ref="X5" pin="1"/>
     </net>
-    <net code="2" name="Net-(R9-Pad1)">
-      <node ref="R9" pin="1"/>
+    <net code="4" name="/LED Driver Boost/RT">
       <node ref="U1" pin="11"/>
+      <node ref="R9" pin="1"/>
     </net>
-    <net code="3" name="Net-(C11-Pad1)">
-      <node ref="C11" pin="1"/>
+    <net code="5" name="PWMIN">
+      <node ref="U2" pin="U1"/>
+      <node ref="U1" pin="8"/>
+    </net>
+    <net code="6" name="SHDN_L">
+      <node ref="U2" pin="N1"/>
+      <node ref="R1" pin="1"/>
+      <node ref="R6" pin="2"/>
+      <node ref="J2" pin="1"/>
+      <node ref="U1" pin="12"/>
+    </net>
+    <net code="7" name="/LED Driver Boost/LED_CATHODE">
+      <node ref="J1" pin="4"/>
+      <node ref="Q2" pin="3"/>
+    </net>
+    <net code="8" name="CTRL">
+      <node ref="RT1" pin="1"/>
+      <node ref="U2" pin="L1"/>
+      <node ref="U1" pin="6"/>
+      <node ref="R3" pin="2"/>
+      <node ref="J1" pin="2"/>
+    </net>
+    <net code="9" name="/LED Driver Boost/SS">
+      <node ref="C6" pin="1"/>
       <node ref="U1" pin="10"/>
     </net>
-    <net code="4" name="Net-(Q2-Pad2)">
-      <node ref="U1" pin="1"/>
-      <node ref="Q2" pin="2"/>
-    </net>
-    <net code="5" name="Net-(Q1-Pad3)">
-      <node ref="R16" pin="1"/>
+    <net code="10" name="/LED Driver Boost/LX">
       <node ref="Q1" pin="3"/>
-      <node ref="U1" pin="15"/>
-    </net>
-    <net code="6" name="Net-(D10-Pad1)">
-      <node ref="D10" pin="1"/>
-      <node ref="D9" pin="2"/>
-    </net>
-    <net code="7" name="Net-(D14-Pad2)">
-      <node ref="D14" pin="2"/>
-      <node ref="Q2" pin="1"/>
-    </net>
-    <net code="8" name="Net-(D5-Pad1)">
-      <node ref="D5" pin="1"/>
-      <node ref="U1" pin="3"/>
-      <node ref="R17" pin="1"/>
-    </net>
-    <net code="9" name="+BATT">
+      <node ref="L1" pin="2"/>
       <node ref="D1" pin="2"/>
-      <node ref="R7" pin="1"/>
+    </net>
+    <net code="11" name="Net-(C8-Pad1)">
       <node ref="C8" pin="1"/>
-      <node ref="L2" pin="1"/>
-      <node ref="U1" pin="14"/>
-      <node ref="J5" pin="1"/>
-      <node ref="J6" pin="1"/>
+      <node ref="R10" pin="2"/>
     </net>
-    <net code="10" name="/CTRL">
-      <node ref="U2" pin="3"/>
-      <node ref="R8" pin="2"/>
-      <node ref="RT1" pin="2"/>
-      <node ref="U1" pin="6"/>
+    <net code="12" name="+3V3">
+      <node ref="D3" pin="1"/>
+      <node ref="U2" pin="Y2"/>
+      <node ref="U2" pin="W1"/>
+      <node ref="J6" pin="3"/>
+      <node ref="U2" pin="B1"/>
+      <node ref="U4" pin="1"/>
+      <node ref="J3" pin="1"/>
+      <node ref="U2" pin="AD14"/>
+      <node ref="U2" pin="AD23"/>
+      <node ref="R7" pin="1"/>
+      <node ref="J7" pin="1"/>
+      <node ref="R11" pin="1"/>
+      <node ref="C14" pin="1"/>
+      <node ref="U2" pin="A22"/>
+      <node ref="R15" pin="2"/>
+      <node ref="C17" pin="1"/>
+      <node ref="U5" pin="6"/>
+      <node ref="U5" pin="5"/>
+      <node ref="U5" pin="1"/>
+      <node ref="Q3" pin="C"/>
+      <node ref="C20" pin="1"/>
+      <node ref="C30" pin="1"/>
+      <node ref="C16" pin="1"/>
+      <node ref="C18" pin="1"/>
+      <node ref="C19" pin="1"/>
+      <node ref="U3" pin="3"/>
+      <node ref="U5" pin="10"/>
+      <node ref="C31" pin="1"/>
     </net>
-    <net code="11" name="Net-(R8-Pad1)">
-      <node ref="U1" pin="7"/>
+    <net code="13" name="/LED Driver Boost/PWMOUT">
+      <node ref="Q2" pin="2"/>
+      <node ref="U1" pin="1"/>
+    </net>
+    <net code="14" name="/LED Driver Boost/LED_ANODE">
+      <node ref="U1" pin="3"/>
+      <node ref="R4" pin="1"/>
+      <node ref="J1" pin="1"/>
+    </net>
+    <net code="15" name="Net-(R10-Pad1)">
+      <node ref="U1" pin="5"/>
+      <node ref="R10" pin="1"/>
+    </net>
+    <net code="16" name="/LED Driver Boost/INTVCC">
+      <node ref="C7" pin="1"/>
+      <node ref="U1" pin="13"/>
+    </net>
+    <net code="17" name="/LED Driver Boost/SENSE">
       <node ref="R8" pin="1"/>
+      <node ref="U1" pin="15"/>
+      <node ref="Q1" pin="1"/>
     </net>
-    <net code="12" name="Net-(Q1-Pad2)">
+    <net code="18" name="Net-(Q1-Pad2)">
       <node ref="Q1" pin="2"/>
       <node ref="U1" pin="16"/>
     </net>
-    <net code="13" name="/~SHDN">
-      <node ref="R6" pin="1"/>
-      <node ref="U1" pin="12"/>
-      <node ref="U2" pin="16"/>
-      <node ref="R7" pin="2"/>
-      <node ref="J7" pin="1"/>
-    </net>
-    <net code="14" name="Net-(J4-Pad11)">
-      <node ref="J4" pin="11"/>
-    </net>
-    <net code="15" name="/~RESET">
-      <node ref="R10" pin="2"/>
-      <node ref="C13" pin="1"/>
-      <node ref="U2" pin="40"/>
-      <node ref="R12" pin="1"/>
-      <node ref="J4" pin="15"/>
-    </net>
-    <net code="16" name="/USB_VBUS">
-      <node ref="D2" pin="2"/>
-      <node ref="J3" pin="1"/>
-    </net>
-    <net code="17" name="/USB_DM">
-      <node ref="J3" pin="2"/>
-      <node ref="U2" pin="33"/>
-    </net>
-    <net code="18" name="/USB_DP">
-      <node ref="U2" pin="34"/>
-      <node ref="J3" pin="3"/>
-    </net>
-    <net code="19" name="Net-(J3-Pad4)">
-      <node ref="J3" pin="4"/>
-    </net>
-    <net code="20" name="GND">
-      <node ref="C8" pin="2"/>
-      <node ref="C7" pin="2"/>
-      <node ref="C3" pin="2"/>
-      <node ref="C13" pin="2"/>
-      <node ref="C16" pin="2"/>
-      <node ref="U1" pin="17"/>
-      <node ref="C4" pin="2"/>
-      <node ref="R16" pin="2"/>
-      <node ref="U2" pin="35"/>
-      <node ref="U2" pin="18"/>
-      <node ref="U2" pin="42"/>
-      <node ref="R19" pin="2"/>
-      <node ref="C5" pin="2"/>
-      <node ref="U2" pin="5"/>
-      <node ref="J4" pin="16"/>
-      <node ref="C9" pin="2"/>
-      <node ref="R9" pin="2"/>
-      <node ref="J7" pin="2"/>
-      <node ref="C11" pin="2"/>
-      <node ref="SW1" pin="1"/>
-      <node ref="J2" pin="2"/>
-      <node ref="C14" pin="2"/>
-      <node ref="J4" pin="10"/>
-      <node ref="J4" pin="20"/>
-      <node ref="J4" pin="12"/>
-      <node ref="J4" pin="14"/>
-      <node ref="J4" pin="8"/>
-      <node ref="J4" pin="18"/>
-      <node ref="J4" pin="4"/>
-      <node ref="J4" pin="6"/>
-      <node ref="J1" pin="2"/>
-      <node ref="C6" pin="2"/>
-      <node ref="J5" pin="2"/>
-      <node ref="C12" pin="2"/>
-      <node ref="J6" pin="2"/>
-      <node ref="R6" pin="2"/>
-      <node ref="RT1" pin="1"/>
-      <node ref="C2" pin="2"/>
-      <node ref="C10" pin="2"/>
-      <node ref="Q2" pin="3"/>
-      <node ref="C15" pin="2"/>
-      <node ref="SW4" pin="1"/>
-      <node ref="C1" pin="2"/>
-      <node ref="J3" pin="5"/>
-      <node ref="R3" pin="1"/>
-      <node ref="SW3" pin="1"/>
-      <node ref="SW2" pin="1"/>
-      <node ref="U3" pin="4"/>
-      <node ref="J8" pin="8"/>
-    </net>
-    <net code="21" name="Net-(C1-Pad1)">
-      <node ref="R3" pin="2"/>
-      <node ref="J3" pin="6"/>
-      <node ref="C1" pin="1"/>
-    </net>
-    <net code="22" name="Net-(J8-Pad4)">
-      <node ref="J8" pin="4"/>
-      <node ref="U2" pin="20"/>
-    </net>
-    <net code="23" name="Net-(J8-Pad5)">
-      <node ref="U2" pin="37"/>
-      <node ref="J8" pin="5"/>
-    </net>
-    <net code="24" name="Net-(J8-Pad6)">
-      <node ref="U2" pin="38"/>
-      <node ref="J8" pin="6"/>
-    </net>
-    <net code="25" name="Net-(J8-Pad7)">
-      <node ref="U2" pin="39"/>
-      <node ref="J8" pin="7"/>
-    </net>
-    <net code="26" name="+3V3">
-      <node ref="L1" pin="2"/>
-      <node ref="U3" pin="3"/>
-      <node ref="C12" pin="1"/>
-      <node ref="C6" pin="1"/>
-      <node ref="C9" pin="1"/>
-      <node ref="R2" pin="2"/>
-      <node ref="C10" pin="1"/>
-      <node ref="J4" pin="1"/>
-      <node ref="R10" pin="1"/>
-      <node ref="J2" pin="3"/>
-      <node ref="C3" pin="1"/>
-      <node ref="D3" pin="1"/>
-      <node ref="R5" pin="1"/>
-      <node ref="R4" pin="1"/>
-      <node ref="R1" pin="1"/>
-      <node ref="J8" pin="1"/>
-      <node ref="U2" pin="17"/>
-      <node ref="U2" pin="36"/>
-      <node ref="U2" pin="44"/>
-    </net>
-    <net code="27" name="/INTVCC">
-      <node ref="C15" pin="1"/>
-      <node ref="U1" pin="13"/>
-    </net>
-    <net code="28" name="Net-(D4-Pad2)">
-      <node ref="Q1" pin="1"/>
-      <node ref="L2" pin="2"/>
-      <node ref="D4" pin="2"/>
-    </net>
-    <net code="29" name="/SW_1">
-      <node ref="SW4" pin="2"/>
-      <node ref="U2" pin="22"/>
-    </net>
-    <net code="30" name="/SW_2">
-      <node ref="SW3" pin="2"/>
-      <node ref="U2" pin="23"/>
-    </net>
-    <net code="31" name="/SW_3">
-      <node ref="SW2" pin="2"/>
-      <node ref="U2" pin="24"/>
-    </net>
-    <net code="32" name="/SERVO">
-      <node ref="J1" pin="1"/>
-      <node ref="U2" pin="15"/>
-    </net>
-    <net code="33" name="/SWDIO">
-      <node ref="U2" pin="46"/>
-      <node ref="J4" pin="7"/>
+    <net code="19" name="/LED Driver Boost/FB">
+      <node ref="U1" pin="2"/>
       <node ref="R2" pin="1"/>
+      <node ref="R5" pin="1"/>
     </net>
-    <net code="34" name="/PWMIN">
-      <node ref="U1" pin="8"/>
-      <node ref="U2" pin="7"/>
-    </net>
-    <net code="35" name="/RGB_RED">
-      <node ref="U2" pin="28"/>
-      <node ref="R13" pin="1"/>
-    </net>
-    <net code="36" name="Net-(J8-Pad2)">
-      <node ref="U2" pin="47"/>
-      <node ref="J8" pin="2"/>
-    </net>
-    <net code="37" name="Net-(J8-Pad3)">
-      <node ref="U2" pin="48"/>
-      <node ref="J8" pin="3"/>
-    </net>
-    <net code="38" name="Net-(C2-Pad1)">
-      <node ref="C2" pin="1"/>
+    <net code="20" name="+BATT">
+      <node ref="J7" pin="2"/>
+      <node ref="C15" pin="1"/>
+      <node ref="U1" pin="14"/>
+      <node ref="C29" pin="2"/>
+      <node ref="J4" pin="1"/>
+      <node ref="R16" pin="2"/>
+      <node ref="R1" pin="2"/>
+      <node ref="L1" pin="1"/>
+      <node ref="C3" pin="1"/>
       <node ref="U3" pin="1"/>
-      <node ref="D1" pin="1"/>
+      <node ref="C1" pin="1"/>
       <node ref="D2" pin="1"/>
+      <node ref="C2" pin="1"/>
     </net>
-    <net code="39" name="/~OPENLED">
-      <node ref="U1" pin="9"/>
-      <node ref="R5" pin="2"/>
-      <node ref="U2" pin="21"/>
-    </net>
-    <net code="40" name="Net-(C4-Pad1)">
+    <net code="21" name="/LED Driver Boost/BOOST_OUT">
+      <node ref="D1" pin="1"/>
       <node ref="C4" pin="1"/>
-      <node ref="U2" pin="43"/>
+      <node ref="U1" pin="4"/>
+      <node ref="R4" pin="2"/>
+      <node ref="R2" pin="2"/>
+      <node ref="C5" pin="1"/>
     </net>
-    <net code="41" name="Net-(R12-Pad2)">
+    <net code="22" name="RGB_RED">
       <node ref="R12" pin="2"/>
-      <node ref="SW1" pin="2"/>
+      <node ref="U2" pin="D2"/>
     </net>
-    <net code="42" name="Net-(D3-Pad4)">
-      <node ref="D3" pin="4"/>
+    <net code="23" name="RGB_GRN">
       <node ref="R13" pin="2"/>
+      <node ref="U2" pin="F2"/>
     </net>
-    <net code="43" name="Net-(D3-Pad3)">
-      <node ref="D3" pin="3"/>
-      <node ref="R14" pin="1"/>
+    <net code="24" name="RGB_BLU">
+      <node ref="R14" pin="2"/>
+      <node ref="U2" pin="G1"/>
     </net>
-    <net code="44" name="Net-(D3-Pad2)">
-      <node ref="D3" pin="2"/>
+    <net code="25" name="Net-(J6-Pad2)">
+      <node ref="J6" pin="2"/>
+    </net>
+    <net code="26" name="Net-(J6-Pad6)">
+      <node ref="J6" pin="6"/>
+    </net>
+    <net code="27" name="/nrf52840/RF_C">
+      <node ref="L3" pin="1"/>
+      <node ref="C9" pin="1"/>
+      <node ref="L4" pin="1"/>
+    </net>
+    <net code="28" name="Net-(U2-PadT23)">
+      <node ref="U2" pin="T23"/>
+    </net>
+    <net code="29" name="Net-(U2-PadK2)">
+      <node ref="U2" pin="K2"/>
+    </net>
+    <net code="30" name="Net-(U2-PadM2)">
+      <node ref="U2" pin="M2"/>
+    </net>
+    <net code="31" name="Net-(U2-PadP2)">
+      <node ref="U2" pin="P2"/>
+    </net>
+    <net code="32" name="Net-(U2-PadT2)">
+      <node ref="U2" pin="T2"/>
+    </net>
+    <net code="33" name="Net-(U2-PadAC9)">
+      <node ref="U2" pin="AC9"/>
+    </net>
+    <net code="34" name="Net-(U2-PadAC11)">
+      <node ref="U2" pin="AC11"/>
+    </net>
+    <net code="35" name="Net-(U2-PadAC15)">
+      <node ref="U2" pin="AC15"/>
+    </net>
+    <net code="36" name="Net-(U2-PadAC17)">
+      <node ref="U2" pin="AC17"/>
+    </net>
+    <net code="37" name="Net-(U2-PadAC19)">
+      <node ref="U2" pin="AC19"/>
+    </net>
+    <net code="38" name="Net-(U2-PadY23)">
+      <node ref="U2" pin="Y23"/>
+    </net>
+    <net code="39" name="Net-(U2-PadV23)">
+      <node ref="U2" pin="V23"/>
+    </net>
+    <net code="40" name="Net-(U2-PadP23)">
+      <node ref="U2" pin="P23"/>
+    </net>
+    <net code="41" name="Net-(U2-PadB19)">
+      <node ref="U2" pin="B19"/>
+    </net>
+    <net code="42" name="Net-(U2-PadB17)">
+      <node ref="U2" pin="B17"/>
+    </net>
+    <net code="43" name="Net-(U2-PadB15)">
+      <node ref="U2" pin="B15"/>
+    </net>
+    <net code="44" name="Net-(U2-PadB13)">
+      <node ref="U2" pin="B13"/>
+    </net>
+    <net code="45" name="Net-(U2-PadB11)">
+      <node ref="U2" pin="B11"/>
+    </net>
+    <net code="46" name="Net-(U2-PadB9)">
+      <node ref="U2" pin="B9"/>
+    </net>
+    <net code="47" name="/nrf52840/UART_FROM_NRF52">
+      <node ref="U2" pin="A16"/>
+      <node ref="J6" pin="5"/>
+    </net>
+    <net code="48" name="/nrf52840/DEC2_2">
+      <node ref="U2" pin="E24"/>
+      <node ref="C25" pin="1"/>
+    </net>
+    <net code="49" name="/nrf52840/DEC3">
+      <node ref="C26" pin="1"/>
+      <node ref="U2" pin="D23"/>
+    </net>
+    <net code="50" name="/nrf52840/DEC2_1">
+      <node ref="U2" pin="A18"/>
+      <node ref="C24" pin="1"/>
+    </net>
+    <net code="51" name="/nrf52840/DEC1">
+      <node ref="U2" pin="C1"/>
+      <node ref="C23" pin="1"/>
+    </net>
+    <net code="52" name="/nrf52840/DEC5">
+      <node ref="U2" pin="N24"/>
+      <node ref="C28" pin="1"/>
+    </net>
+    <net code="53" name="/nrf52840/DEC4">
+      <node ref="C27" pin="1"/>
+      <node ref="U2" pin="B5"/>
+    </net>
+    <net code="54" name="/nrf52840/P0.20">
+      <node ref="J7" pin="6"/>
+      <node ref="U2" pin="AD16"/>
+    </net>
+    <net code="55" name="/nrf52840/P1.02">
+      <node ref="J7" pin="10"/>
+      <node ref="U2" pin="W24"/>
+    </net>
+    <net code="56" name="/nrf52840/P1.00">
+      <node ref="U2" pin="AD22"/>
+      <node ref="J7" pin="7"/>
+    </net>
+    <net code="57" name="/nrf52840/P0.24">
+      <node ref="J7" pin="8"/>
+      <node ref="U2" pin="AD20"/>
+    </net>
+    <net code="58" name="/nrf52840/P0.22">
+      <node ref="U2" pin="AD18"/>
+      <node ref="J7" pin="5"/>
+    </net>
+    <net code="59" name="/nrf52840/P0.13">
+      <node ref="J7" pin="4"/>
+      <node ref="U2" pin="AD8"/>
+    </net>
+    <net code="60" name="/nrf52840/P0.15">
+      <node ref="J7" pin="3"/>
+      <node ref="U2" pin="AD10"/>
+    </net>
+    <net code="61" name="PHOTO_SENSE">
+      <node ref="R18" pin="2"/>
+      <node ref="Q3" pin="E"/>
+      <node ref="U2" pin="J1"/>
+    </net>
+    <net code="62" name="SDA">
+      <node ref="U5" pin="4"/>
+      <node ref="U2" pin="A14"/>
+    </net>
+    <net code="63" name="SCL">
+      <node ref="U2" pin="A12"/>
+      <node ref="U5" pin="2"/>
+    </net>
+    <net code="64" name="/nrf52840/UART_TO_NRF52">
+      <node ref="J6" pin="4"/>
+      <node ref="U2" pin="A20"/>
+    </net>
+    <net code="65" name="MIC_CLK">
+      <node ref="U4" pin="3"/>
+      <node ref="U2" pin="J24"/>
+    </net>
+    <net code="66" name="MIC_DATA">
+      <node ref="U2" pin="L24"/>
+      <node ref="U4" pin="4"/>
+    </net>
+    <net code="67" name="Net-(U2-PadAC21)">
+      <node ref="U2" pin="AC21"/>
+    </net>
+    <net code="68" name="/nrf52840/P1.06">
+      <node ref="U2" pin="R24"/>
+      <node ref="J7" pin="11"/>
+    </net>
+    <net code="69" name="/nrf52840/P1.04">
+      <node ref="U2" pin="U24"/>
+      <node ref="J7" pin="9"/>
+    </net>
+    <net code="70" name="Net-(J3-Pad6)">
+      <node ref="J3" pin="6"/>
+    </net>
+    <net code="71" name="/nrf52840/BOARD_TEMP">
+      <node ref="U2" pin="A8"/>
+      <node ref="RT2" pin="1"/>
       <node ref="R15" pin="1"/>
     </net>
-    <net code="45" name="Net-(J4-Pad13)">
-      <node ref="J4" pin="13"/>
+    <net code="72" name="Net-(U2-PadH2)">
+      <node ref="U2" pin="H2"/>
     </net>
-    <net code="46" name="/RGB_GRN">
-      <node ref="U2" pin="29"/>
-      <node ref="R14" pin="2"/>
-    </net>
-    <net code="47" name="/RGB_BLU">
-      <node ref="U2" pin="30"/>
-      <node ref="R15" pin="2"/>
-    </net>
-    <net code="48" name="Net-(U2-Pad14)">
-      <node ref="U2" pin="14"/>
-    </net>
-    <net code="49" name="Net-(U2-Pad25)">
-      <node ref="U2" pin="25"/>
-    </net>
-    <net code="50" name="Net-(U2-Pad26)">
-      <node ref="U2" pin="26"/>
-    </net>
-    <net code="51" name="Net-(U2-Pad27)">
-      <node ref="U2" pin="27"/>
-    </net>
-    <net code="52" name="Net-(U2-Pad11)">
-      <node ref="U2" pin="11"/>
-    </net>
-    <net code="53" name="Net-(U2-Pad8)">
-      <node ref="U2" pin="8"/>
-    </net>
-    <net code="54" name="Net-(U2-Pad9)">
-      <node ref="U2" pin="9"/>
-    </net>
-    <net code="55" name="Net-(U2-Pad10)">
-      <node ref="U2" pin="10"/>
-    </net>
-    <net code="56" name="Net-(U2-Pad31)">
-      <node ref="U2" pin="31"/>
-    </net>
-    <net code="57" name="Net-(U2-Pad41)">
-      <node ref="U2" pin="41"/>
-    </net>
-    <net code="58" name="Net-(U2-Pad12)">
-      <node ref="U2" pin="12"/>
-    </net>
-    <net code="59" name="Net-(U2-Pad32)">
-      <node ref="U2" pin="32"/>
-    </net>
-    <net code="60" name="Net-(U2-Pad13)">
-      <node ref="U2" pin="13"/>
-    </net>
-    <net code="61" name="Net-(D12-Pad2)">
-      <node ref="D12" pin="2"/>
-      <node ref="D13" pin="1"/>
-    </net>
-    <net code="62" name="Net-(D5-Pad2)">
-      <node ref="D5" pin="2"/>
-      <node ref="D6" pin="1"/>
-    </net>
-    <net code="63" name="Net-(D10-Pad2)">
-      <node ref="D11" pin="1"/>
-      <node ref="D10" pin="2"/>
-    </net>
-    <net code="64" name="Net-(D11-Pad2)">
-      <node ref="D11" pin="2"/>
-      <node ref="D12" pin="1"/>
-    </net>
-    <net code="65" name="Net-(C16-Pad1)">
-      <node ref="C16" pin="1"/>
+    <net code="73" name="/nrf52840/VBATT_MEAS">
+      <node ref="U2" pin="A10"/>
       <node ref="R17" pin="2"/>
-      <node ref="D4" pin="1"/>
-      <node ref="R18" pin="2"/>
-      <node ref="U1" pin="4"/>
+      <node ref="R16" pin="1"/>
     </net>
-    <net code="66" name="Net-(D13-Pad2)">
-      <node ref="D14" pin="1"/>
-      <node ref="D13" pin="2"/>
+    <net code="74" name="Net-(J3-Pad8)">
+      <node ref="J3" pin="8"/>
     </net>
-    <net code="67" name="Net-(D8-Pad2)">
-      <node ref="D9" pin="1"/>
-      <node ref="D8" pin="2"/>
+    <net code="75" name="Net-(J3-Pad7)">
+      <node ref="J3" pin="7"/>
     </net>
-    <net code="68" name="Net-(D7-Pad2)">
-      <node ref="D7" pin="2"/>
-      <node ref="D8" pin="1"/>
+    <net code="76" name="/nrf52840/NRF52_SWDIO">
+      <node ref="U2" pin="AC24"/>
+      <node ref="J3" pin="2"/>
     </net>
-    <net code="69" name="Net-(D6-Pad2)">
-      <node ref="D6" pin="2"/>
-      <node ref="D7" pin="1"/>
+    <net code="77" name="/nrf52840/NRF52_SWDCLK">
+      <node ref="J3" pin="4"/>
+      <node ref="U2" pin="AA24"/>
     </net>
-    <net code="70" name="Net-(U2-Pad19)">
-      <node ref="U2" pin="19"/>
-    </net>
-    <net code="71" name="Net-(R11-Pad1)">
-      <node ref="U1" pin="5"/>
-      <node ref="R11" pin="1"/>
-    </net>
-    <net code="72" name="Net-(C14-Pad1)">
-      <node ref="C14" pin="1"/>
+    <net code="78" name="/nrf52840/NRF52_RESET_L">
       <node ref="R11" pin="2"/>
+      <node ref="U2" pin="AC13"/>
+      <node ref="J3" pin="10"/>
+      <node ref="U2" pin="AD12"/>
     </net>
-    <net code="73" name="Net-(U2-Pad1)">
-      <node ref="U2" pin="1"/>
+    <net code="79" name="VBUS">
+      <node ref="D2" pin="2"/>
+      <node ref="J5" pin="1"/>
+      <node ref="U2" pin="AD2"/>
+      <node ref="C21" pin="1"/>
     </net>
-    <net code="74" name="Net-(U2-Pad2)">
-      <node ref="U2" pin="2"/>
+    <net code="80" name="Net-(U2-PadAB2)">
+      <node ref="U2" pin="AB2"/>
     </net>
-    <net code="75" name="Net-(U2-Pad4)">
-      <node ref="U2" pin="4"/>
+    <net code="81" name="Net-(U2-PadB3)">
+      <node ref="U2" pin="B3"/>
     </net>
-    <net code="76" name="/SERVO_PWR">
-      <node ref="J1" pin="3"/>
-      <node ref="R4" pin="2"/>
+    <net code="82" name="USB_D_P">
+      <node ref="U2" pin="AD4"/>
+      <node ref="J5" pin="3"/>
     </net>
-    <net code="77" name="Net-(J2-Pad1)">
-      <node ref="J2" pin="1"/>
+    <net code="83" name="/nrf52840/DECUSB">
+      <node ref="U2" pin="AC5"/>
+      <node ref="C22" pin="1"/>
     </net>
-    <net code="78" name="Net-(J4-Pad17)">
-      <node ref="J4" pin="17"/>
+    <net code="84" name="USB_D_N">
+      <node ref="U2" pin="AD6"/>
+      <node ref="J5" pin="2"/>
     </net>
-    <net code="79" name="Net-(J4-Pad19)">
-      <node ref="J4" pin="19"/>
+    <net code="85" name="/nrf52840/NRF52_XC1">
+      <node ref="Y1" pin="1"/>
+      <node ref="U2" pin="B24"/>
+      <node ref="C13" pin="1"/>
     </net>
-    <net code="80" name="Net-(J4-Pad2)">
-      <node ref="J4" pin="2"/>
+    <net code="86" name="/nrf52840/NRF52_XC2">
+      <node ref="U2" pin="A23"/>
+      <node ref="C12" pin="1"/>
+      <node ref="Y1" pin="3"/>
     </net>
-    <net code="81" name="Net-(J4-Pad3)">
-      <node ref="J4" pin="3"/>
+    <net code="87" name="/nrf52840/RF_ANT">
+      <node ref="A1" pin="1"/>
+      <node ref="L3" pin="2"/>
     </net>
-    <net code="82" name="Net-(J4-Pad5)">
-      <node ref="J4" pin="5"/>
+    <net code="88" name="/nrf52840/RF_PIN">
+      <node ref="L2" pin="1"/>
+      <node ref="C10" pin="1"/>
+      <node ref="U2" pin="H23"/>
     </net>
-    <net code="83" name="/SWDCLK">
-      <node ref="R1" pin="2"/>
-      <node ref="J4" pin="9"/>
-      <node ref="U2" pin="45"/>
+    <net code="89" name="/nrf52840/RF_MATCHED">
+      <node ref="L2" pin="2"/>
+      <node ref="C9" pin="2"/>
+      <node ref="C11" pin="1"/>
     </net>
-    <net code="84" name="Net-(C5-Pad1)">
-      <node ref="C5" pin="1"/>
-      <node ref="C7" pin="1"/>
-      <node ref="U2" pin="6"/>
-      <node ref="L1" pin="1"/>
+    <net code="90" name="Net-(D3-Pad2)">
+      <node ref="R14" pin="1"/>
+      <node ref="D3" pin="2"/>
+    </net>
+    <net code="91" name="Net-(D3-Pad3)">
+      <node ref="D3" pin="3"/>
+      <node ref="R13" pin="1"/>
+    </net>
+    <net code="92" name="Net-(D3-Pad4)">
+      <node ref="R12" pin="1"/>
+      <node ref="D3" pin="4"/>
+    </net>
+    <net code="93" name="Net-(J5-Pad4)">
+      <node ref="J5" pin="4"/>
+    </net>
+    <net code="94" name="Net-(U4-Pad2)">
+      <node ref="U4" pin="2"/>
+    </net>
+    <net code="95" name="Net-(U5-Pad7)">
+      <node ref="U5" pin="7"/>
     </net>
   </nets>
 </export>
